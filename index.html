@@ -117,11 +117,12 @@
   .edu-item span{font-size:.78rem;color:var(--muted)}
 
   /* Screen recording */
-  .screenrec{margin:32px 0 0}
-  .screenrec video{width:100%;display:block;border-radius:12px;box-shadow:0 18px 44px rgba(0,0,0,.22);background:#191919;aspect-ratio:16/10}
+  .screenrec{margin:0}
+  .screenrec video{width:100%;display:block;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.18);background:#191919;aspect-ratio:16/10}
+  .vid-big{font:inherit;font-size:.78rem;font-weight:600;color:var(--green);background:none;border:none;cursor:pointer;padding:0}
+  .vidmodal{max-width:min(1200px,96vw)}
+  .vidmodal video{width:100%;border-radius:10px;display:block}
   .screenrec figcaption{font-size:.76rem;color:#999;margin-top:10px;text-align:center}
-  .alu-points{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px;padding-left:0;list-style:none}
-  .alu-points li{font-size:.92rem;color:#333;border-top:2px solid var(--green);padding-top:12px}
 
   /* Project rows */
   .project{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:32px}
@@ -176,9 +177,8 @@
     .timeline .logo{height:auto}
     .timeline .logo img{max-width:100px;max-height:32px}
     .cards{grid-template-columns:1fr 1fr}
-    .maki-grid,.case,.alu-points{grid-template-columns:1fr}
-    .alu-points{gap:14px}
-    .case{gap:24px}
+    .maki-grid,.case{grid-template-columns:1fr}
+      .case{gap:24px}
     .edu-logos{gap:16px 28px}
     .maki-head{flex-direction:column;align-items:flex-start;gap:10px}
     .maki-head img{height:30px}
@@ -331,15 +331,20 @@
         <h3>Business Operations Projects at AluCab</h3>
         <p class="sub">Focused on making operations and client processes more efficient through structured digital systems.</p>
       </div>
-      <figure class="screenrec">
-        <video poster="assets/video/alucab-notion-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording of the Alu-Cab operating system in Notion"><source src="assets/video/alucab-notion.mp4" type="video/mp4"><source src="assets/video/alucab-notion.webm" type="video/webm"></video>
-        <figcaption>The Notion operating system I built at Alu-Cab. Recreated with sample data in place of real client details.</figcaption>
-      </figure>
-      <ul class="alu-points">
-        <li>Managed 50+ client accounts, strengthening relationships and supporting a rise in quarterly sales.</li>
-        <li>Built a shared Notion workspace and SOPs to organise bookings, repairs and payments, improving workflow visibility.</li>
-        <li>Streamlined order and delivery processes with the operations team, reducing turnaround time.</li>
-      </ul>
+      <div class="project">
+        <figure class="screenrec">
+          <video poster="assets/video/alucab-notion-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording of the Alu-Cab operating system in Notion"><source src="assets/video/alucab-notion.mp4" type="video/mp4"><source src="assets/video/alucab-notion.webm" type="video/webm"></video>
+          <figcaption><button type="button" class="vid-big" onclick="var d=document.getElementById('vidbox');d.showModal();d.querySelector('video').play()">⤢ Watch full size</button> · Recreated with sample data in place of real client details.</figcaption>
+        </figure>
+        <div>
+          <h3 style="margin-bottom:12px">Project Highlights</h3>
+          <ul>
+            <li>Managed 50+ client accounts, strengthening relationships and supporting a rise in quarterly sales.</li>
+            <li>Built a shared Notion workspace and SOPs to organise bookings, repairs and payments, improving workflow visibility.</li>
+            <li>Streamlined order and delivery processes with the operations team, reducing turnaround time.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -421,6 +426,13 @@
     </div>
   </section>
 </main>
+
+<dialog id="vidbox" class="modal vidmodal" onclick="if(event.target===this){this.querySelector('video').pause();this.close()}">
+  <div class="modal-inner">
+    <div class="modal-head"><p>Alu-Cab operating system in Notion (sample data)</p><button type="button" class="modal-close" aria-label="Close" onclick="var d=document.getElementById('vidbox');d.querySelector('video').pause();d.close()">✕</button></div>
+    <video muted loop playsinline controls preload="none" poster="assets/video/alucab-notion-poster.jpg"><source src="assets/video/alucab-notion.mp4" type="video/mp4"><source src="assets/video/alucab-notion.webm" type="video/webm"></video>
+  </div>
+</dialog>
 
 <dialog id="sop" class="modal" onclick="if(event.target===this)this.close()">
   <div class="modal-inner">
