@@ -68,7 +68,7 @@
   .about-text .lead{font-size:1.18rem;line-height:1.55;color:var(--ink);font-weight:500}
 
   /* Timeline */
-  .timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:4px}
+  .timeline{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:16px;padding-top:4px}
   .timeline .logo{height:56px;display:flex;align-items:center}
   .timeline .logo img{max-height:40px;max-width:150px;width:auto}
   .timeline .dot{position:relative;height:28px;margin:10px 0}
@@ -76,6 +76,10 @@
   .timeline .dot::after{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:#111}
   .timeline .item:last-child .dot::before{right:0}
   .timeline .date{font-weight:700}
+  .timeline .logo img{max-width:130px}
+  .freelance-badge{display:inline-block;padding:6px 14px;border-radius:999px;border:1.5px dashed var(--green);color:var(--green);font-weight:700;font-size:.9rem}
+  .timeline .now .dot::after{background:#fff;border:3px solid var(--green);box-sizing:border-box}
+  .timeline .now .dot::before{background:repeating-linear-gradient(90deg,#111 0 6px,transparent 6px 11px)}
   .timeline .role{font-size:.85rem;color:var(--muted)}
 
   /* Project rows */
@@ -173,6 +177,20 @@
 </header>
 
 <main>
+  <section id="work">
+    <div class="wrap">
+      <h2>Career Journey</h2>
+      <div class="timeline">
+        <div class="item"><div class="logo"><img src="assets/img/kpmg.png" alt="KPMG"></div><div class="dot"></div><div><div class="date">Jan - Mar 2024</div><div class="role">Audit Intern</div></div></div>
+        <div class="item"><div class="logo"><img src="assets/img/gurufocus.png" alt="GuruFocus"></div><div class="dot"></div><div><div class="date">Mar - Jun 2025</div><div class="role">Market Research &amp; Equity Analysis</div></div></div>
+        <div class="item"><div class="logo"><img src="assets/img/seeking-alpha.png" alt="Seeking Alpha"></div><div class="dot"></div><div><div class="date">Apr - Aug 2025</div><div class="role">Financial Analyst</div></div></div>
+        <div class="item"><div class="logo"><img src="assets/img/alucab.png" alt="Alu-Cab"></div><div class="dot"></div><div><div class="date">Jun - Aug 2025</div><div class="role">Project &amp; Client Relation (B2B, B2C)</div></div></div>
+        <div class="item"><div class="logo"><img src="assets/img/makipeople.svg" alt="MakiPeople"></div><div class="dot"></div><div><div class="date">Feb - Jul 2026</div><div class="role">Sales Ops &amp; Enablement</div></div></div>
+        <div class="item now"><div class="logo"><span class="freelance-badge">Freelance</span></div><div class="dot"></div><div><div class="date">Present</div><div class="role">Freelance projects in my free time</div></div></div>
+      </div>
+    </div>
+  </section>
+
   <section id="about">
     <div class="wrap">
       <h2>About Me</h2>
@@ -183,18 +201,6 @@
           <p>Alongside this, I’m building a venture from the ground up: mapping the full value chain, working through each bottleneck one at a time, building the financial model, reading regulations at the primary source, studying the competition and pitching to investors.</p>
           <p>I follow market trends, world news and geopolitics, and keep a close eye on AI and robotics.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="work">
-    <div class="wrap">
-      <h2>Career Journey</h2>
-      <div class="timeline">
-        <div class="item"><div class="logo"><img src="assets/img/kpmg.png" alt="KPMG"></div><div class="dot"></div><div><div class="date">Jan - Mar 2024</div><div class="role">Audit Intern</div></div></div>
-        <div class="item"><div class="logo"><img src="assets/img/gurufocus.png" alt="GuruFocus"></div><div class="dot"></div><div><div class="date">Mar - Jun 2025</div><div class="role">Market Research &amp; Equity Analysis</div></div></div>
-        <div class="item"><div class="logo"><img src="assets/img/seeking-alpha.png" alt="Seeking Alpha"></div><div class="dot"></div><div><div class="date">Apr - Aug 2025</div><div class="role">Financial Analyst</div></div></div>
-        <div class="item"><div class="logo"><img src="assets/img/alucab.png" alt="Alu-Cab"></div><div class="dot"></div><div><div class="date">Jun - Aug 2025</div><div class="role">Project &amp; Client Relation (B2B, B2C)</div></div></div>
       </div>
     </div>
   </section>
