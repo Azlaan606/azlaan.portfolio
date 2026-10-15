@@ -81,6 +81,30 @@
   .timeline .logo img{max-width:130px}
   .timeline .role{font-size:.85rem;color:var(--muted)}
 
+  /* Maki */
+  .maki{background:#f7f9f8}
+  .maki-head{display:flex;align-items:center;gap:22px;margin-bottom:18px}
+  .maki-head img{height:40px;width:auto}
+  .maki-head h2{margin:0;font-size:clamp(1.4rem,2.6vw,1.8rem)}
+  .maki-head .meta{color:var(--muted);font-size:.9rem}
+  .maki-intro{max-width:760px;font-size:1.08rem;color:#222;margin-bottom:30px}
+  .maki-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .mcard{background:#fff;border:1px solid #e6ebe8;border-radius:14px;padding:22px}
+  .mcard h3{font-size:1rem;color:var(--green);margin-bottom:8px}
+  .mcard p{font-size:.92rem;color:#333}
+  .maki-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 36px;margin-top:34px}
+  .maki-meta h4,.gallery-title{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#888;font-weight:600;margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{background:#fff;border:1px solid #dfe6e2;border-radius:999px;padding:5px 12px;font-size:.82rem;color:#2a2a2a}
+  .gallery-title{margin-top:40px}
+  .gallery-title span{text-transform:none;letter-spacing:0;font-weight:400;color:#aaa;margin-left:8px}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .shot-btn{font:inherit;border:1px solid #e3e8e5;background:#fff;border-radius:12px;padding:0;overflow:hidden;cursor:pointer;text-align:left;transition:box-shadow .15s,border-color .15s}
+  .shot-btn:hover{border-color:var(--green);box-shadow:0 8px 22px rgba(29,74,58,.12)}
+  .shot-btn img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:left top}
+  .shot-btn span{display:block;padding:10px 12px;font-size:.82rem;font-weight:600;color:#222}
+  #lb-cap{font-size:.9rem;color:#333}
+
   /* Project rows */
   .project{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:32px}
   .project ul{padding-left:20px}
@@ -131,6 +155,10 @@
     .timeline .logo{height:auto}
     .timeline .logo img{max-width:100px;max-height:32px}
     .cards{grid-template-columns:1fr 1fr}
+    .maki-grid,.maki-meta{grid-template-columns:1fr}
+    .maki-head{flex-direction:column;align-items:flex-start;gap:10px}
+    .maki-head img{height:30px}
+    .gallery{grid-template-columns:1fr 1fr}
     .strengths{grid-template-columns:1fr 1fr}
     .strengths .man{grid-row:auto;grid-column:span 2;max-width:200px;margin:0 auto}
   }
@@ -176,6 +204,20 @@
 </header>
 
 <main>
+  <section id="about">
+    <div class="wrap">
+      <h2>About Me</h2>
+      <div class="about">
+        <div class="about-text">
+          <p class="lead">I like working across teams and taking things from idea to done. I automate repeated tasks so the team can focus on new initiatives, and I’m comfortable taking the lead and working independently. I work well with many departments and people: sharing ideas and insights, helping each other, and making sure the work gets done at its best.</p>
+          <p>At MakiPeople I built demos, sales decks and one-pagers alongside executives, and led the push to automate how demos get prepared. At Alu-Cab I ran client operations and sales. At KPMG I worked in audit and client compliance.</p>
+          <p>Alongside this, I’m building a venture from the ground up: mapping the full value chain, working through each bottleneck one at a time, building the financial model, reading regulations at the primary source, studying the competition and pitching to investors.</p>
+          <p>I follow market trends, world news and geopolitics, and keep a close eye on AI and robotics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="work">
     <div class="wrap">
       <h2>Career Journey</h2>
@@ -190,16 +232,61 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="maki" class="maki">
     <div class="wrap">
-      <h2>About Me</h2>
-      <div class="about">
-        <div class="about-text">
-          <p class="lead">I like working across teams and taking things from idea to done. I automate repeated tasks so the team can focus on new initiatives, and I’m comfortable taking the lead and working independently. I work well with many departments and people: sharing ideas and insights, helping each other, and making sure the work gets done at its best.</p>
-          <p>At MakiPeople I built demos, sales decks and one-pagers alongside executives, and led the push to automate how demos get prepared. At Alu-Cab I ran client operations and sales. At KPMG I worked in audit and client compliance.</p>
-          <p>Alongside this, I’m building a venture from the ground up: mapping the full value chain, working through each bottleneck one at a time, building the financial model, reading regulations at the primary source, studying the competition and pitching to investors.</p>
-          <p>I follow market trends, world news and geopolitics, and keep a close eye on AI and robotics.</p>
+      <div class="maki-head">
+        <img src="assets/img/makipeople.svg" alt="MakiPeople">
+        <div>
+          <h2>Sales Ops &amp; Enablement</h2>
+          <p class="meta">MakiPeople · Paris · Feb – Jul 2026</p>
         </div>
+      </div>
+      <p class="maki-intro">At an AI hiring company, I worked between sales, engineering and data to make the sales team faster, using AI, automation and the right tools at every step of the deal.</p>
+
+      <div class="maki-grid">
+        <article class="mcard">
+          <h3>Enterprise RFP &amp; RFI tenders</h3>
+          <p>Contributed to 6 enterprise tenders for Nike, Mastercard, NatWest, Decathlon, Thales and Wayfair, and built a client-facing EU AI Act compliance presentation.</p>
+        </article>
+        <article class="mcard">
+          <h3>AI proof-of-concepts</h3>
+          <p>Owned the enterprise demo pipeline: AI hiring proof-of-concepts tailored to each prospect’s industry, roles, branding and personas, across 10+ industries.</p>
+        </article>
+        <article class="mcard">
+          <h3>Automation initiative</h3>
+          <p>Proposed and led the Q2 initiative to cut demo prep to under 30 minutes and unlock self-serve demos for AEs. Ran daily 1:1s with the engineering squad, documented every step, updated the playbook and led the enablement session.</p>
+        </article>
+        <article class="mcard">
+          <h3>Sales enablement</h3>
+          <p>Built battlecards, objection-handling guides, one-pagers and a 17-step demo SOP now used team-wide.</p>
+        </article>
+      </div>
+
+      <div class="maki-meta">
+        <div>
+          <h4>Worked across</h4>
+          <div class="chips"><span>BDRs</span><span>Account Executives</span><span>Software Engineers</span><span>Data</span><span>Customer Success</span></div>
+        </div>
+        <div>
+          <h4>CRM &amp; sales tools</h4>
+          <div class="chips"><span>Salesforce</span><span>MS Dynamics 365</span><span>Gong</span><span>Outreach</span><span>Storylane</span></div>
+        </div>
+        <div>
+          <h4>AI tools</h4>
+          <div class="chips"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Perplexity</span><span>MS Copilot</span><span>Notion AI</span><span>Gamma</span><span>Synthesia</span></div>
+        </div>
+        <div>
+          <h4>Workflow</h4>
+          <div class="chips"><span>Notion</span><span>ClickUp</span><span>Slack</span><span>MS Teams</span><span>Google Workspace</span></div>
+        </div>
+      </div>
+
+      <h4 class="gallery-title">Work samples <span>Sensitive details hidden</span></h4>
+      <div class="gallery">
+        <button type="button" class="shot-btn" data-img="assets/img/maki-q2-initiative.jpg" data-cap="The Q2 GTM initiative I owned: cut demo prep to under 30 minutes and unlock self-serve demos."><img src="assets/img/maki-q2-initiative.jpg" alt="Q2 GTM initiative" loading="lazy"><span>Q2 automation initiative</span></button>
+        <button type="button" class="shot-btn" data-img="assets/img/maki-banking-onepager.jpg" data-cap="Enterprise one-pager for the banking sector."><img src="assets/img/maki-banking-onepager.jpg" alt="Banking one-pager" loading="lazy" style="object-position:top"><span>Banking one-pager</span></button>
+        <button type="button" class="shot-btn" data-img="assets/img/maki-objection-card.jpg" data-cap="Objection-handling card from the sales playbook."><img src="assets/img/maki-objection-card.jpg" alt="Objection-handling card" loading="lazy"><span>Objection handling</span></button>
+        <button type="button" class="shot-btn" onclick="document.getElementById('sop').showModal()"><img src="assets/img/sop-2.jpg" alt="Demo SOP" loading="lazy"><span>17-step demo SOP</span></button>
       </div>
     </div>
   </section>
@@ -321,5 +408,15 @@
 </dialog>
 
 <footer>© 2026 Azlaan Mansuri</footer>
+<dialog id="lightbox" class="modal" onclick="if(event.target===this)this.close()">
+  <div class="modal-inner">
+    <div class="modal-head"><p id="lb-cap"></p><button type="button" class="modal-close" aria-label="Close" onclick="document.getElementById('lightbox').close()">✕</button></div>
+    <img id="lb-img" src="" alt="">
+  </div>
+</dialog>
+<script>
+document.querySelectorAll('.shot-btn[data-img]').forEach(function(b){b.addEventListener('click',function(){
+  var d=document.getElementById('lightbox');document.getElementById('lb-img').src=b.dataset.img;document.getElementById('lb-cap').textContent=b.dataset.cap;d.showModal();});});
+</script>
 </body>
 </html>
