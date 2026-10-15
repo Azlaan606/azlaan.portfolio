@@ -116,48 +116,12 @@
   .edu-item img{width:auto}
   .edu-item span{font-size:.78rem;color:var(--muted)}
 
-  /* Notion mock */
-  .nmock-wrap{margin:0}
-  .nmock-wrap figcaption{font-size:.75rem;color:#999;margin-top:10px;text-align:center}
-  .nmock{background:#191919;color:#e6e6e6;border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.22);overflow:hidden;font-size:11px;line-height:1.4}
-  .nm-top{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid #2a2a2a;color:#9b9b9b;font-size:10px}
-  .nm-dots{display:flex;gap:4px}.nm-dots i{width:8px;height:8px;border-radius:50%;background:#3a3a3a;display:block}
-  .nm-crumb{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm-crumb b{color:#cfcfcf;font-weight:500}
-  .nm-edit{white-space:nowrap}
-  .nm-tabs{display:flex;gap:4px;padding:8px 12px 0;flex-wrap:wrap}
-  .nm-tabs button{font:inherit;font-size:10.5px;color:#9b9b9b;background:none;border:none;padding:5px 8px;border-radius:6px;cursor:pointer}
-  .nm-tabs button.on{background:#2c2c2c;color:#fff}
-  .nm-body{position:relative;height:322px;padding:6px 16px 14px}
-  .nm-view{position:absolute;inset:6px 16px 14px;opacity:0;transform:translateY(6px);transition:opacity .45s,transform .45s;pointer-events:none}
-  .nm-view.on{opacity:1;transform:none;pointer-events:auto}
-  .nm-view h5{font-size:19px;font-weight:700;color:#fff;margin:6px 0 10px}
-  .nm-h{font-size:11px;font-weight:600;color:#d0d0d0;margin:12px 0 6px}
-  .nm-quick{display:flex;flex-wrap:wrap;gap:6px 14px;color:#9b9b9b;font-size:10px}
-  .nm-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-  .nm-card{background:#252525;border:1px solid #2f2f2f;border-radius:7px;padding:8px}
-  .nm-card b{display:block;color:#eee;font-weight:600;font-size:10.5px}
-  .nm-card small{display:block;color:#8f8f8f;font-size:9.5px;margin:2px 0 4px}
-  .nm-card.inc{background:#1f2e25;border-color:#2b4334}.nm-card.exp{background:#3a2222;border-color:#553131}
-  .nm-card.done b{text-decoration:line-through;color:#8f8f8f}
-  .nm-card em,.nm-t em{font-style:normal;font-size:9.5px;padding:1px 6px;border-radius:4px;display:inline-block}
-  .t-green{background:#1f4d33;color:#8fe0ae}.t-blue{background:#1d3b5c;color:#8cc4ff}.t-purple{background:#3c2d5a;color:#cbb2ff}
-  .t-red{background:#5a2626;color:#ffaaa5}.t-yellow{background:#5a4a1c;color:#ffd97a}.t-gray{background:#333;color:#bbb}
-  .nm-t{width:100%;border-collapse:collapse}
-  .nm-t th{text-align:left;color:#8f8f8f;font-weight:500;font-size:9.5px;padding:5px 6px;border-bottom:1px solid #2c2c2c}
-  .nm-t td{padding:6px;border-bottom:1px solid #262626;color:#ddd;white-space:nowrap}
-  .bar{display:block;width:80px;height:5px;background:#333;border-radius:3px;overflow:hidden}
-  .bar i{display:block;height:100%;width:0;background:#4c9a6e;transition:width 1s .3s}
-  .nm-view.on .bar i{width:var(--w)}
-  .nm-view.on .nm-t tr,.nm-view.on .nm-card{animation:nmIn .5s both}
-  .nm-view.on .nm-t tr:nth-child(2),.nm-view.on .nm-card:nth-child(2){animation-delay:.08s}
-  .nm-view.on .nm-t tr:nth-child(3),.nm-view.on .nm-card:nth-child(3){animation-delay:.16s}
-  .nm-view.on .nm-t tr:nth-child(4){animation-delay:.24s}.nm-view.on .nm-t tr:nth-child(5){animation-delay:.32s}
-  .nm-view.on .nm-t tr:nth-child(6){animation-delay:.4s}.nm-view.on .nm-t tr:nth-child(7){animation-delay:.48s}
-  @keyframes nmIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
-  .nm-kanban{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-  .nm-kanban>div{display:flex;flex-direction:column;gap:6px}
-  .nm-col{color:#9b9b9b;font-size:10px;font-weight:600}.nm-col i{font-style:normal;color:#666;margin-left:4px}
-  @media (prefers-reduced-motion:reduce){.nm-view,.bar i{transition:none}.nm-view.on .nm-t tr,.nm-view.on .nm-card{animation:none}}
+  /* Screen recording */
+  .screenrec{margin:32px 0 0}
+  .screenrec video{width:100%;display:block;border-radius:12px;box-shadow:0 18px 44px rgba(0,0,0,.22);background:#191919;aspect-ratio:16/10}
+  .screenrec figcaption{font-size:.76rem;color:#999;margin-top:10px;text-align:center}
+  .alu-points{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px;padding-left:0;list-style:none}
+  .alu-points li{font-size:.92rem;color:#333;border-top:2px solid var(--green);padding-top:12px}
 
   /* Project rows */
   .project{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:32px}
@@ -212,11 +176,8 @@
     .timeline .logo{height:auto}
     .timeline .logo img{max-width:100px;max-height:32px}
     .cards{grid-template-columns:1fr 1fr}
-    .maki-grid,.case{grid-template-columns:1fr}
-    .nm-body{height:340px}
-    .nm-quick span:nth-child(n+4){display:none}
-    .nm-edit{display:none}
-    .nm-t td:nth-child(2),.nm-t th:nth-child(2){display:none}
+    .maki-grid,.case,.alu-points{grid-template-columns:1fr}
+    .alu-points{gap:14px}
     .case{gap:24px}
     .edu-logos{gap:16px 28px}
     .maki-head{flex-direction:column;align-items:flex-start;gap:10px}
@@ -370,81 +331,15 @@
         <h3>Business Operations Projects at AluCab</h3>
         <p class="sub">Focused on making operations and client processes more efficient through structured digital systems.</p>
       </div>
-      <div class="project">
-        <figure class="nmock-wrap">
-        <div class="nmock" id="nmock" aria-label="Animated recreation of the Alu-Cab operating system in Notion">
-          <div class="nm-top"><span class="nm-dots"><i></i><i></i><i></i></span><span class="nm-crumb">AluCab Operating System <b id="nm-crumb"></b></span><span class="nm-edit">Edited just now · Share ☆</span></div>
-          <div class="nm-tabs" role="tablist">
-            <button class="on" data-v="0">🚙 Dashboard</button><button data-v="1">💳 Finance</button><button data-v="2">👥 Client CRM</button><button data-v="3">✅ Projects &amp; Tasks</button>
-          </div>
-          <div class="nm-body">
-            <!-- Dashboard -->
-            <div class="nm-view on">
-              <h5>AluCab Operating System</h5>
-              <div class="nm-quick"><span>+ New Client</span><span>+ New Transaction</span><span>+ Add Project</span><span>+ New Invoice</span><span>+ Add Task</span></div>
-              <p class="nm-h">📌 Next milestones</p>
-              <div class="nm-cards">
-                <div class="nm-card"><b>Rooftop tent stock arrives</b><small>Sep 12, 2025</small><em class="t-blue">Supply</em></div>
-                <div class="nm-card"><b>Ulaanbaatar Expo stand</b><small>Sep 27, 2025</small><em class="t-purple">Marketing</em></div>
-                <div class="nm-card"><b>Q3 fitting target: 18 vehicles</b><small>Sep 30, 2025</small><em class="t-green">Sales</em></div>
-              </div>
-              <p class="nm-h">📊 Projects progress</p>
-              <table class="nm-t"><tr><th>Project</th><th>Owner</th><th>Due</th><th>Progress</th></tr>
-                <tr><td>Client booking system</td><td>AM</td><td>Jul 18</td><td><span class="bar"><i style="--w:100%"></i></span></td></tr>
-                <tr><td>Repair & warranty log</td><td>AM</td><td>Aug 01</td><td><span class="bar"><i style="--w:80%"></i></span></td></tr>
-                <tr><td>Supplier price list</td><td>Ops</td><td>Aug 15</td><td><span class="bar"><i style="--w:55%"></i></span></td></tr>
-              </table>
-            </div>
-            <!-- Finance -->
-            <div class="nm-view">
-              <h5>Finance Tracker</h5>
-              <div class="nm-cards">
-                <div class="nm-card inc"><b>Canopy fit · LC79</b><small>$4,850 · Jul 22</small><em class="t-green">Income</em></div>
-                <div class="nm-card inc"><b>Rooftop tent · Hilux</b><small>$2,390 · Jul 25</small><em class="t-green">Income</em></div>
-                <div class="nm-card exp"><b>Workshop parts order</b><small>$1,120 · Jul 26</small><em class="t-red">Expense</em></div>
-              </div>
-              <p class="nm-h">🧾 Invoices</p>
-              <table class="nm-t"><tr><th>Invoice</th><th>Client</th><th>Amount</th><th>Status</th></tr>
-                <tr><td>INV-2041</td><td>B. Ganbold</td><td>$4,850</td><td><em class="t-green">Paid</em></td></tr>
-                <tr><td>INV-2042</td><td>Steppe Rentals</td><td>$7,600</td><td><em class="t-yellow">Pending</em></td></tr>
-                <tr><td>INV-2043</td><td>O. Tsetseg</td><td>$2,390</td><td><em class="t-green">Paid</em></td></tr>
-                <tr><td>INV-2044</td><td>Altai Tours</td><td>$3,150</td><td><em class="t-blue">Sent</em></td></tr>
-              </table>
-            </div>
-            <!-- CRM -->
-            <div class="nm-view">
-              <h5>Client CRM</h5>
-              <table class="nm-t"><tr><th>Client</th><th>Vehicle</th><th>Interest</th><th>Stage</th></tr>
-                <tr><td>B. Ganbold</td><td>Land Cruiser 79</td><td>Canopy + drawers</td><td><em class="t-green">Delivered</em></td></tr>
-                <tr><td>Steppe Rentals</td><td>3× Hilux</td><td>Fleet rooftop tents</td><td><em class="t-yellow">Quote sent</em></td></tr>
-                <tr><td>O. Tsetseg</td><td>Hilux</td><td>Rooftop tent</td><td><em class="t-green">Delivered</em></td></tr>
-                <tr><td>Altai Tours</td><td>Land Cruiser 76</td><td>Full overland build</td><td><em class="t-purple">Fitting booked</em></td></tr>
-                <tr><td>D. Enkhbayar</td><td>Ranger</td><td>Roof rack</td><td><em class="t-blue">New lead</em></td></tr>
-                <tr><td>Gobi Field Co.</td><td>2× LC78</td><td>Service & repair</td><td><em class="t-gray">Follow-up</em></td></tr>
-              </table>
-            </div>
-            <!-- Tasks -->
-            <div class="nm-view">
-              <h5>Projects &amp; Tasks</h5>
-              <div class="nm-kanban">
-                <div><p class="nm-col">To do <i>3</i></p><div class="nm-card"><b>Confirm fitting slot · Altai Tours</b><em class="t-purple">Ops</em></div><div class="nm-card"><b>Send quote follow-up · Steppe Rentals</b><em class="t-green">Sales</em></div><div class="nm-card"><b>Reorder tent covers</b><em class="t-blue">Supply</em></div></div>
-                <div><p class="nm-col">In progress <i>2</i></p><div class="nm-card"><b>Warranty claim · LC79 drawer</b><em class="t-red">Repair</em></div><div class="nm-card"><b>Update SOP: delivery checklist</b><em class="t-gray">Process</em></div></div>
-                <div><p class="nm-col">Done <i>2</i></p><div class="nm-card done"><b>Deliver Hilux tent · O. Tsetseg</b><em class="t-green">Sales</em></div><div class="nm-card done"><b>Monthly finance review</b><em class="t-yellow">Finance</em></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <figcaption>Recreated from the Notion workspace I built at Alu-Cab, with sample data in place of real client details.</figcaption>
-        </figure>
-        <div>
-          <h3 style="margin-bottom:12px">Project Highlights</h3>
-          <ul>
-            <li>Managed 50+ client accounts, strengthening relationships and supporting a rise in quarterly sales.</li>
-            <li>Built a shared Notion workspace and SOPs to organize bookings, repairs, and payments, improving workflow visibility.</li>
-            <li>Streamlined order and delivery processes with the operations team, reducing turnaround time.</li>
-          </ul>
-        </div>
-      </div>
+      <figure class="screenrec">
+        <video poster="assets/video/alucab-notion-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording of the Alu-Cab operating system in Notion"><source src="assets/video/alucab-notion.mp4" type="video/mp4"><source src="assets/video/alucab-notion.webm" type="video/webm"></video>
+        <figcaption>The Notion operating system I built at Alu-Cab. Recreated with sample data in place of real client details.</figcaption>
+      </figure>
+      <ul class="alu-points">
+        <li>Managed 50+ client accounts, strengthening relationships and supporting a rise in quarterly sales.</li>
+        <li>Built a shared Notion workspace and SOPs to organise bookings, repairs and payments, improving workflow visibility.</li>
+        <li>Streamlined order and delivery processes with the operations team, reducing turnaround time.</li>
+      </ul>
     </div>
   </section>
 
@@ -548,15 +443,6 @@
 <script>
 document.querySelectorAll('.shot-btn[data-img]').forEach(function(b){b.addEventListener('click',function(){
   var d=document.getElementById('lightbox');document.getElementById('lb-img').src=b.dataset.img;document.getElementById('lb-cap').textContent=b.dataset.cap;d.showModal();});});
-</script>
-<script>
-(function(){var m=document.getElementById('nmock');if(!m)return;var tabs=m.querySelectorAll('.nm-tabs button'),views=m.querySelectorAll('.nm-view'),crumb=document.getElementById('nm-crumb'),names=['','/ Finance Tracker','/ Client CRM','/ Projects & Tasks'],i=0,timer,paused=false;
-function show(n){i=n;tabs.forEach(function(t,k){t.classList.toggle('on',k===n)});views.forEach(function(v,k){v.classList.toggle('on',k===n)});crumb.textContent=names[n];}
-function next(){if(!paused)show((i+1)%views.length);}
-tabs.forEach(function(t,k){t.addEventListener('click',function(){show(k);clearInterval(timer);timer=setInterval(next,4500);});});
-m.addEventListener('mouseenter',function(){paused=true});m.addEventListener('mouseleave',function(){paused=false});
-if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){timer=setInterval(next,4500);}
-})();
 </script>
 </body>
 </html>
