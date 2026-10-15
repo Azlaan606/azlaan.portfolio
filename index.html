@@ -44,8 +44,11 @@
   .hero .tagline{margin:18px auto 0;max-width:620px;font-size:1.15rem;color:#333}
   .hero .tagline.placeholder{color:#9aa;border:1px dashed #c5d0cb;border-radius:8px;padding:8px 14px;display:inline-block;font-size:.95rem}
   .hero .actions{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
-  .worked{margin-top:48px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#888}
+  .worked{margin-top:40px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#888}
   .worked-list{margin-top:10px;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 28px;font-weight:600;font-size:1.02rem;color:#333}
+  .logo-row{margin-top:18px;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:24px 56px}
+  .logo-row img{width:auto;filter:grayscale(1);opacity:.75;transition:filter .2s,opacity .2s}
+  .logo-row img:hover{filter:none;opacity:1}
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:44px auto 0}
   .stat{background:#fff;border:1px solid #e6ebe8;border-radius:12px;padding:18px 14px}
   .stat b{display:block;font-size:1.6rem;color:var(--green);line-height:1.1}
@@ -106,6 +109,8 @@
     .menu a:not(.btn){display:none}
     .hero{padding:64px 0 52px}
     .stats{grid-template-columns:1fr 1fr}
+    .logo-row{gap:22px 36px}
+    .logo-row img{transform:scale(.85)}
     .about,.project{grid-template-columns:1fr;gap:28px}
     .about img{max-width:420px;margin:0 auto}
     .timeline{grid-template-columns:1fr;gap:4px}
@@ -146,18 +151,18 @@
   <div class="wrap">
     <h1 class="name">Azlaan Mansuri</h1>
     <p class="tagline placeholder">Your one-line positioning goes here</p>
-    <div class="actions">
-      <a class="btn btn-solid" href="assets/Azlaan_Mansuri_CV.pdf" download>Download CV</a>
-      <a class="btn btn-ghost" href="#work">See my work</a>
-      <a class="btn btn-ghost" href="#contact">Contact me</a>
-    </div>
     <p class="worked">Experience at</p>
-    <div class="worked-list"><span>MakiPeople</span><span>Seeking Alpha</span><span>Alu-Cab</span><span>KPMG</span></div>
+    <div class="logo-row">
+      <img src="assets/img/makipeople.svg" alt="MakiPeople" style="height:30px">
+      <img src="assets/img/seeking-alpha.png" alt="Seeking Alpha" style="height:30px">
+      <img src="assets/img/alucab.png" alt="Alu-Cab" style="height:26px">
+      <img src="assets/img/kpmg.png" alt="KPMG" style="height:34px">
+    </div>
     <div class="stats">
-      <div class="stat"><b>6</b><span>enterprise RFP/RFI tenders contributed to</span></div>
-      <div class="stat"><b>#1</b><span>on Google for my SMCI equity analysis</span></div>
-      <div class="stat"><b>50+</b><span>client accounts managed</span></div>
-      <div class="stat"><b>$50M+</b><span>in client cash balances verified</span></div>
+      <div class="stat"><b>6</b><span>enterprise RFP/RFI tenders, incl. Nike, Mastercard, NatWest, Decathlon, Thales &amp; Wayfair</span></div>
+      <div class="stat"><b>#1</b><span>on Google for my equity analysis on Seeking Alpha</span></div>
+      <div class="stat"><b>50+</b><span>B2C client accounts at Alu-Cab, with bookings, repairs &amp; payments run through a system I built</span></div>
+      <div class="stat"><b>17-step</b><span>sales SOP I created, now used team-wide</span></div>
     </div>
   </div>
 </header>
