@@ -102,21 +102,19 @@
 
   /* Consulting */
   .eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#888;font-weight:600;margin-bottom:6px}
-  .case-head h2{margin-bottom:10px}
-  .case-intro{max-width:760px;font-size:1.05rem;color:#222;margin-bottom:24px}
-  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .deck-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
-  .deck-row .shot-btn img{aspect-ratio:16/9;object-position:center}
+  .case{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}
+  .case h2{margin-bottom:12px;line-height:1.2}
+  .case-lead{font-size:1.05rem;color:#222;margin-bottom:14px}
+  .case-points{padding-left:18px;font-size:.92rem;color:#444}
+  .case-points li{margin-bottom:4px}
+  .case-slide img{aspect-ratio:16/9;object-fit:cover}
 
   /* Education */
-  .edu{padding:36px 0;border-top:1px solid #eee}
-  .edu-row{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:baseline;font-size:.9rem;color:#333}
-  .edu-row+.edu-row{margin-top:12px}
-  .edu-row h4{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#999;font-weight:600}
-  .edu-row i{font-style:normal;color:#999;font-size:.82rem}
-  .courses{display:flex;flex-wrap:wrap;gap:4px 20px}
-  .courses span{white-space:nowrap}
-  .edu-sub{display:block;color:var(--muted);font-size:.84rem;margin-top:2px}
+  .edu{padding:40px 0;border-top:1px solid #eee}
+  .edu-logos{display:flex;justify-content:center;align-items:flex-end;flex-wrap:wrap;gap:20px 56px;margin-top:14px}
+  .edu-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .edu-item img{width:auto}
+  .edu-item span{font-size:.78rem;color:var(--muted)}
 
   /* Project rows */
   .project{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:32px}
@@ -171,10 +169,9 @@
     .timeline .logo{height:auto}
     .timeline .logo img{max-width:100px;max-height:32px}
     .cards{grid-template-columns:1fr 1fr}
-    .maki-grid,.case-grid{grid-template-columns:1fr}
-    .deck-row{grid-template-columns:1fr 1fr 1fr;gap:10px}
-    .deck-row .shot-btn span{font-size:.72rem;padding:8px}
-    .edu-row{grid-template-columns:1fr;gap:4px}
+    .maki-grid,.case{grid-template-columns:1fr}
+    .case{gap:24px}
+    .edu-logos{gap:22px 34px}
     .maki-head{flex-direction:column;align-items:flex-start;gap:10px}
     .maki-head img{height:30px}
     .gallery{grid-template-columns:1fr 1fr}
@@ -338,29 +335,18 @@
 
   <section id="consulting">
     <div class="wrap">
-      <div class="case-head">
-        <p class="eyebrow">Business consulting</p>
-        <h2>Strategic growth review: Reboucle Mobilités</h2>
-        <p class="case-intro">A Nantes circular-mobility business wanted a more predictable B2B growth model. I worked out why most of its paid pilots weren’t turning into annual contracts, and where to focus next.</p>
-      </div>
-      <div class="case-grid">
-        <article class="mcard">
-          <h3>The challenge</h3>
-          <p>Only 9 of 22 paid pilots converted in 2025, the sales cycle ran 2 to 8 months, and 7 clients made up 58% of B2B revenue.</p>
-        </article>
-        <article class="mcard">
-          <h3>The diagnosis</h3>
-          <p>The person interested in a pilot is often not the person who holds the budget. Pilots stall at that budget-ownership gap, not because of the product.</p>
-        </article>
-        <article class="mcard">
-          <h3>The direction</h3>
-          <p>An integrated leasing, maintenance and workshops contract built on the 90% of revenue that already works, with three options to test before committing.</p>
-        </article>
-      </div>
-      <div class="deck-row">
-        <button type="button" class="shot-btn" data-img="assets/img/consulting-1.jpg" data-cap="The mandate and the key numbers."><img src="assets/img/consulting-1.jpg" alt="Slide 1: the mandate" loading="lazy"><span>The mandate</span></button>
-        <button type="button" class="shot-btn" data-img="assets/img/consulting-2.jpg" data-cap="From evidence to direction."><img src="assets/img/consulting-2.jpg" alt="Slide 2: evidence to direction" loading="lazy"><span>Evidence to direction</span></button>
-        <button type="button" class="shot-btn" data-img="assets/img/consulting-3.jpg" data-cap="Three directions to investigate, with the assumption to test for each."><img src="assets/img/consulting-3.jpg" alt="Slide 3: three directions" loading="lazy"><span>Three directions</span></button>
+      <div class="case">
+        <div class="case-text">
+          <p class="eyebrow">Business consulting</p>
+          <h2>B2B growth strategy for Reboucle Mobilités</h2>
+          <p class="case-lead">Only 41% of Reboucle’s paid pilots were turning into annual contracts. I traced the stall to a gap between the people who want the service and the people who hold the budget, and proposed an integrated contract to close it.</p>
+          <ul class="case-points">
+            <li>Analysed pilot conversion, sales-cycle length and client concentration</li>
+            <li>Built the case on the 90% of revenue that already works</li>
+            <li>Set out three options, each with the assumption to test first</li>
+          </ul>
+        </div>
+        <button type="button" class="case-slide shot-btn" data-img="assets/img/consulting-2.jpg" data-cap="From evidence to direction: the core of the recommendation."><img src="assets/img/consulting-2.jpg" alt="Slide: from evidence to direction" loading="lazy"></button>
       </div>
     </div>
   </section>
@@ -415,14 +401,8 @@
 
   <section id="education" class="edu">
     <div class="wrap">
-      <div class="edu-row">
-        <h4>Education</h4>
-        <p><b>Audencia Business School</b> · Bachelor in Management <span class="edu-sub">Business Model Analysis · Financial Performance Management · Data Analysis · International Negotiation &amp; Sales · International Trade</span></p>
-      </div>
-      <div class="edu-row">
-        <h4>Courses</h4>
-        <p class="courses"><span>Principles of Microeconomics <i>MIT</i></span><span>Principles of Macroeconomics <i>MIT</i></span><span>Startup School <i>Y Combinator</i></span><span>Startup Secrets <i>Harvard Innovation Labs</i></span></p>
-      </div>
+      <p class="eyebrow center">Education &amp; courses</p>
+      <div class="edu-logos"><div class="edu-item"><img src="assets/img/edu/audencia.svg" alt="Audencia Business School" style="height:26px"><span>Bachelor in Management</span></div><div class="edu-item"><img src="assets/img/edu/mit.svg" alt="MIT" style="height:26px"><span>Micro &amp; Macroeconomics</span></div><div class="edu-item"><img src="assets/img/edu/harvard.png" alt="Harvard Innovation Labs" style="height:30px"><span>Startup Secrets</span></div><div class="edu-item"><img src="assets/img/edu/yc.svg" alt="Y Combinator" style="height:26px"><span>Startup School</span></div></div>
     </div>
   </section>
 
