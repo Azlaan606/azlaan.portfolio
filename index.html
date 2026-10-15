@@ -24,23 +24,32 @@
   .center{text-align:center}
   .sub{color:var(--muted);font-size:.95rem;max-width:640px;margin:6px auto 0}
 
+  /* Top bar */
+  .topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.35rem;font-weight:600;color:var(--green);text-decoration:none}
+  .menu{display:flex;align-items:center;gap:26px;font-size:.88rem}
+  .menu a{text-decoration:none;color:#333}
+  .menu a:hover{color:var(--green)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;border:1px solid var(--green);transition:background .15s}
+  .btn-solid{background:var(--green);color:#fff !important}
+  .btn-solid:hover{background:#163b2e}
+  .btn-ghost{color:var(--green)}
+  .btn-ghost:hover{background:#eef3f0}
+  .menu .btn{padding:7px 14px;font-size:.82rem}
+
   /* Hero */
-  .hero{position:relative;height:540px;max-width:1040px;margin:0 auto;overflow:hidden}
-  .hero .float{position:absolute}
-  .hero .name{position:absolute;left:50%;top:22%;transform:translateX(-50%);text-align:center;
-    font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;color:var(--green);
-    font-size:clamp(3rem,7vw,5.2rem);line-height:1.02;z-index:2}
-  .nav{position:absolute;left:50%;top:60%;transform:translateX(-50%);display:flex;gap:16px;z-index:3}
-  .nav a{display:block;min-width:170px;padding:10px 18px;border:1px solid #9a9a9a;background:#fff;
-    text-decoration:underline;font-size:.9rem;text-align:center}
-  .nav a:hover{background:var(--soft)}
-  .f-news{left:3%;top:2%;width:15%;transform:rotate(-6deg)}
-  .f-plane{left:17%;top:5%;width:25%}
-  .f-bag{left:15%;top:26%;width:20%}
-  .f-me{left:8%;top:46%;width:8.5%}
-  .f-coffee{left:66%;top:3%;width:12%}
-  .f-laptop{left:65%;top:28%;width:13%}
-  .f-record{left:81%;top:7%;width:15%}
+  .hero{padding:96px 0 72px;text-align:center;background:linear-gradient(180deg,#f6f8f6 0%,#fff 100%)}
+  .hero .name{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;color:var(--green);font-size:clamp(3rem,7vw,5rem);line-height:1.02}
+  .hero .tagline{margin:18px auto 0;max-width:620px;font-size:1.15rem;color:#333}
+  .hero .tagline.placeholder{color:#9aa;border:1px dashed #c5d0cb;border-radius:8px;padding:8px 14px;display:inline-block;font-size:.95rem}
+  .hero .actions{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
+  .worked{margin-top:48px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#888}
+  .worked-list{margin-top:10px;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 28px;font-weight:600;font-size:1.02rem;color:#333}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:44px auto 0}
+  .stat{background:#fff;border:1px solid #e6ebe8;border-radius:12px;padding:18px 14px}
+  .stat b{display:block;font-size:1.6rem;color:var(--green);line-height:1.1}
+  .stat span{display:block;margin-top:6px;font-size:.82rem;color:var(--muted);line-height:1.4}
 
   /* About */
   .about{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:center}
@@ -94,12 +103,9 @@
 
   @media (max-width:820px){
     section{padding:52px 0}
-    .hero{height:auto;padding:28px 20px 40px;display:flex;flex-direction:column;align-items:center}
-    .hero .float{display:none}
-    .hero .f-me{display:block;position:static;width:34%;max-width:130px;order:2;margin-top:14px}
-    .hero .name{position:static;transform:none;order:1;margin-bottom:8px}
-    .nav{position:static;transform:none;order:3;flex-direction:column;width:100%;max-width:300px;margin-top:20px}
-    .nav a{min-width:0}
+    .menu a:not(.btn){display:none}
+    .hero{padding:64px 0 52px}
+    .stats{grid-template-columns:1fr 1fr}
     .about,.project{grid-template-columns:1fr;gap:28px}
     .about img{max-width:420px;margin:0 auto}
     .timeline{grid-template-columns:1fr;gap:4px}
@@ -123,20 +129,37 @@
 </head>
 <body>
 
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#">Azlaan Mansuri</a>
+    <nav class="menu">
+      <a href="#about">About</a>
+      <a href="#work">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-solid" href="assets/Azlaan_Mansuri_CV.pdf" download>Download CV</a>
+    </nav>
+  </div>
+</div>
+
 <header class="hero">
-  <img class="float f-news" src="assets/img/newspaper.jpg" alt="">
-  <img class="float f-plane" src="assets/img/plane.png" alt="">
-  <img class="float f-bag" src="assets/img/briefcase.png" alt="">
-  <img class="float f-me" src="assets/img/azlaan-standing.png" alt="Azlaan Mansuri">
-  <img class="float f-coffee" src="assets/img/coffee.png" alt="">
-  <img class="float f-laptop" src="assets/img/laptop.png" alt="">
-  <img class="float f-record" src="assets/img/record-player.png" alt="">
-  <h1 class="name">Azlaan<br>Mansuri</h1>
-  <nav class="nav">
-    <a href="#about">About Me</a>
-    <a href="#work">My Work</a>
-    <a href="#contact">Contact Me</a>
-  </nav>
+  <div class="wrap">
+    <h1 class="name">Azlaan Mansuri</h1>
+    <p class="tagline placeholder">Your one-line positioning goes here</p>
+    <div class="actions">
+      <a class="btn btn-solid" href="assets/Azlaan_Mansuri_CV.pdf" download>Download CV</a>
+      <a class="btn btn-ghost" href="#work">See my work</a>
+      <a class="btn btn-ghost" href="#contact">Contact me</a>
+    </div>
+    <p class="worked">Experience at</p>
+    <div class="worked-list"><span>MakiPeople</span><span>Seeking Alpha</span><span>Alu-Cab</span><span>KPMG</span></div>
+    <div class="stats">
+      <div class="stat"><b>6</b><span>enterprise RFP/RFI tenders contributed to</span></div>
+      <div class="stat"><b>#1</b><span>on Google for my SMCI equity analysis</span></div>
+      <div class="stat"><b>50+</b><span>client accounts managed</span></div>
+      <div class="stat"><b>$50M+</b><span>in client cash balances verified</span></div>
+    </div>
+  </div>
 </header>
 
 <main>
@@ -210,7 +233,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="projects">
     <div class="wrap center">
       <h3>More Hands-On Business and Strategy Projects</h3>
       <p class="sub">Built planning, coordination, and strategy skills through projects with startups and events.</p>
