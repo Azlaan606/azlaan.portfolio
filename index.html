@@ -54,9 +54,15 @@
   .stat span{display:block;margin-top:6px;font-size:.82rem;color:var(--muted);line-height:1.4}
 
   /* About */
-  .about{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:center}
-  .about p{margin-bottom:16px;text-align:justify}
-  .about img{border-radius:50%;aspect-ratio:1.55/1;object-fit:cover;width:100%}
+  .about{display:grid;grid-template-columns:1.7fr 1fr;gap:48px;align-items:start}
+  .about-text p{margin-bottom:18px;color:#222}
+  .about-text .lead{font-size:1.18rem;line-height:1.55;color:var(--ink);font-weight:500}
+  .glance{background:var(--soft);border-radius:14px;padding:24px;position:sticky;top:84px}
+  .glance h3{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#888;font-weight:600;margin-bottom:14px}
+  .glance dt{font-size:.8rem;font-weight:700;color:var(--green);margin-top:14px}
+  .glance dt:first-of-type{margin-top:0}
+  .glance dd{font-size:.92rem;color:#333}
+  .glance a{font-weight:600}
 
   /* Timeline */
   .timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:4px}
@@ -111,7 +117,7 @@
     .logo-row{gap:22px 36px}
     .logo-row img{transform:scale(.85)}
     .about,.project{grid-template-columns:1fr;gap:28px}
-    .about img{max-width:420px;margin:0 auto}
+    .glance{position:static}
     .timeline{grid-template-columns:1fr;gap:4px}
     .timeline .item{display:grid;grid-template-columns:110px 28px 1fr;align-items:center;gap:10px}
     .timeline .dot{height:100%;min-height:64px;margin:0}
@@ -119,7 +125,6 @@
     .timeline .dot::after{left:0;top:50%;transform:translateY(-50%)}
     .timeline .logo{height:auto}
     .timeline .logo img{max-width:100px;max-height:32px}
-    .about p{text-align:left}
     .cards{grid-template-columns:1fr 1fr}
     .strengths{grid-template-columns:1fr 1fr}
     .strengths .man{grid-row:auto;grid-column:span 2;max-width:200px;margin:0 auto}
@@ -171,11 +176,20 @@
     <div class="wrap">
       <h2>About Me</h2>
       <div class="about">
-        <div>
-          <p>Hello, my name is Azlaan. I am 20 years old and currently enrolled at Audencia Business School. I’m passionate about understanding how businesses perform and manage their operations, how they generate value, and how that value translates into profit. I consider myself a perfectionist when it comes to working and leading in high-pressure environments. I also like to stay informed about global economics by reading books and news regularly.</p>
-          <p>I have experience working closely with executives, VPs, and managers, and have collaborated with both large corporations and smaller, growing companies. I enjoy planning and executing ideas and research with precision while staying organized and detail-oriented.</p>
+        <div class="about-text">
+          <p class="lead">Right now I’m building a business on the side. That means doing all of it at once: the finance, the data and analytics, the market and industry research, the technology, and the conversations with investors. It’s why I work with speed, strength and passion. When it’s your own business, nothing waits.</p>
+          <p>Ideally, I want to work in a small team where I can move across multiple teams. I care a lot about results. I automate anything repeatable and take as much work off the table as I can, so we’re always free to pick up new tasks, new focus areas and new initiatives. I’ve built demos, sales decks, pitches and one-pagers, and worked across a wide range of software tools. I ran client operations and sales at Alu-Cab, worked with executive-level stakeholders at MakiPeople, and did audit and client compliance at KPMG.</p>
+          <p>I read a lot, and I write about what I read. I’m drawn to philosophy: I like to think deeply, reason, and argue with what’s on the page. I also follow what’s happening in AI, software and hardware, and I’m especially interested in robotics making its way into everyday life.</p>
         </div>
-        <img src="assets/img/azlaan-team.png" alt="Azlaan working with his team">
+        <aside class="glance">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>Looking for</dt><dd>Roles at startups and small teams</dd>
+            <dt>Strengths</dt><dd>Sales enablement, client operations, financial analysis, automation</dd>
+            <dt>Languages</dt><dd>English (fluent), French (conversational)</dd>
+            <dt>Writing</dt><dd><a href="https://seekingalpha.com/article/4788368-why-super-micro-computer-unusual-growth-case" target="_blank" rel="noopener">Read my #1-ranked analysis →</a></dd>
+          </dl>
+        </aside>
       </div>
     </div>
   </section>
