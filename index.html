@@ -24,6 +24,17 @@
   .center{text-align:center}
   .sub{color:var(--muted);font-size:.95rem;max-width:640px;margin:6px auto 0}
 
+  /* Side design: topographic lines, margins only */
+  html{background:#fff}
+  body{background:transparent}
+  .topo{position:fixed;top:0;bottom:0;width:calc((100vw - 1100px)/2);pointer-events:none;z-index:-1;background-repeat:repeat-y;background-size:300px 900px}
+  .topo-l{left:0;background-image:url(assets/img/topo-left.svg);background-position:left top}
+  .topo-r{right:0;background-image:url(assets/img/topo-right.svg);background-position:right top}
+  @media (max-width:1300px){.topo{display:none}}
+  .role-label{margin-top:14px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .text-link{display:inline-block;margin-top:14px;font-size:.9rem;font-weight:600;color:var(--green)}
+  #seekingalpha .phone{max-width:240px}
+
   /* Top bar */
   .topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
   .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
@@ -194,6 +205,7 @@
 </style>
 </head>
 <body>
+<div class="topo topo-l" aria-hidden="true"></div><div class="topo topo-r" aria-hidden="true"></div>
 
 <div class="topbar">
   <div class="wrap">
@@ -201,7 +213,7 @@
     <nav class="menu">
       <a href="#about">About</a>
       <a href="#work">Experience</a>
-      <a href="#projects">Projects</a>
+      <a href="#maki">Projects</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-solid" href="assets/Azlaan_Mansuri_CV.pdf" download>Download CV</a>
     </nav>
@@ -211,6 +223,7 @@
 <header class="hero">
   <div class="wrap">
     <h1 class="name">Azlaan Mansuri</h1>
+    <p class="role-label">Sales Ops · GTM Strategy · Operations</p>
     <p class="worked">Experience at</p>
     <div class="logo-row">
       <img src="assets/img/makipeople.svg" alt="MakiPeople" style="height:30px">
@@ -273,7 +286,7 @@
           <p class="meta">GTM team · Sales Ops &amp; Enablement</p>
         </div>
       </div>
-      <p class="maki-intro">At an AI hiring company, I worked day to day with BDRs, Account Executives and the founders to help win enterprise deals, and kept engineering, data and customer success in the loop.</p>
+      <p class="maki-intro">Supported enterprise deals and tenders for companies like Nike, Mastercard and NatWest at an AI hiring company, working day to day with BDRs, Account Executives and the founders, and keeping engineering, data and customer success in the loop.</p>
 
       <div class="maki-grid">
         <article class="mcard">
@@ -304,48 +317,42 @@
     </div>
   </section>
 
-  <section>
+  <section id="seekingalpha">
     <div class="wrap">
-      <div class="center">
-        <h3>Financial analysis and insights</h3>
-        <p class="sub">Writing analytical stock reports combining data insights, valuation work, and operational analysis.</p>
-      </div>
-      <div class="project">
-        <div>
-          <a href="https://seekingalpha.com/article/4788368-why-super-micro-computer-unusual-growth-case" target="_blank" rel="noopener">
-            <div class="phone"><img src="assets/img/smci-article.jpg" alt="Seeking Alpha article: Why Super Micro Computer Is The Most Unusual Growth Case"></div>
-          </a>
-          <a class="caption" href="https://seekingalpha.com/article/4788368-why-super-micro-computer-unusual-growth-case" target="_blank" rel="noopener">Tap to access the full article</a>
+      <div class="case">
+        <div class="case-text">
+          <p class="eyebrow">Equity research · Seeking Alpha</p>
+          <h2>Financial Analyst</h2>
+          <p class="case-lead">My Super Micro Computer (SMCI) analysis ranked #1 on Google. Across 7+ published equity research articles, I turned financial models and industry analysis into clear investment theses for retail and professional investors.</p>
+          <ul class="case-points">
+            <li>Built independent valuation models, tracking ROIC and free cash flow</li>
+            <li>Assessed management strategy and long-term value creation</li>
+            <li>Wrote for a public, investor audience, under my own name</li>
+          </ul>
+          <a class="text-link" href="https://seekingalpha.com/article/4788368-why-super-micro-computer-unusual-growth-case" target="_blank" rel="noopener">Read the SMCI analysis →</a>
         </div>
         <div>
-          <h3 style="margin-bottom:12px">Project Highlights</h3>
-          <ul>
-            <li>Authored a Super Micro Computer (SMCI) analysis that ranked #1 on Google, boosting organic reach among investors.</li>
-            <li>Published 7+ equity research pieces combining valuation, financial modeling, and industry insights.</li>
-            <li>Built valuation models to assess management strategy, ROIC, and long-term value potential.</li>
-          </ul>
+          <a href="https://seekingalpha.com/article/4788368-why-super-micro-computer-unusual-growth-case" target="_blank" rel="noopener"><div class="phone"><img src="assets/img/smci-article.jpg" alt="Seeking Alpha article: Why Super Micro Computer Is The Most Unusual Growth Case"></div></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="alucab">
     <div class="wrap">
-      <div class="center">
-        <h3>Business Operations Projects at AluCab</h3>
-        <p class="sub">Focused on making operations and client processes more efficient through structured digital systems.</p>
-      </div>
-      <div class="project">
+      <div class="case">
         <figure class="screenrec">
           <video poster="assets/video/alucab-notion-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording of the Alu-Cab operating system in Notion"><source src="assets/video/alucab-notion.mp4" type="video/mp4"><source src="assets/video/alucab-notion.webm" type="video/webm"></video>
           <figcaption><button type="button" class="vid-big" onclick="var d=document.getElementById('vidbox');d.showModal();d.querySelector('video').play()">⤢ Watch full size</button> · Recreated with sample data in place of real client details.</figcaption>
         </figure>
-        <div>
-          <h3 style="margin-bottom:12px">Project Highlights</h3>
-          <ul>
-            <li>Managed 50+ client accounts, strengthening relationships and supporting a rise in quarterly sales.</li>
-            <li>Built a shared Notion workspace and SOPs to organise bookings, repairs and payments, improving workflow visibility.</li>
-            <li>Streamlined order and delivery processes with the operations team, reducing turnaround time.</li>
+        <div class="case-text">
+          <p class="eyebrow">Client operations &amp; sales · Alu-Cab</p>
+          <h2>Project Development (B2B, B2C)</h2>
+          <p class="case-lead">Ran 50+ client accounts through an operating system I built in Notion, while selling to customers every day: from first enquiry and quote to fitting, payment and follow-up.</p>
+          <ul class="case-points">
+            <li>Built the shared workspace and SOPs for bookings, repairs and payments</li>
+            <li>Streamlined order and delivery with the operations team, cutting turnaround time</li>
+            <li>Ran market analysis to position new product lines in the premium segment</li>
           </ul>
         </div>
       </div>
@@ -366,37 +373,6 @@
           </ul>
         </div>
         <button type="button" class="case-slide shot-btn" data-img="assets/img/consulting-2.jpg" data-cap="From evidence to direction: the core of the recommendation."><img src="assets/img/consulting-2.jpg" alt="Slide: from evidence to direction" loading="lazy"></button>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="wrap center">
-      <h3>More Hands-On Business and Strategy Projects</h3>
-      <p class="sub">Built planning, coordination, and strategy skills through projects with startups and events.</p>
-      <div class="cards">
-        <div class="card">
-          <div class="logos"><img src="assets/img/ohmybrunch.jpg" alt="Oh My Brunch!"><img src="assets/img/nautiraid.jpg" alt="Nautiraid"></div>
-          <h3>Sales and Partnership Project</h3>
-          <p>Engaged in client outreach and product presentations to build strong business relationships.</p>
-        </div>
-        <div class="card">
-          <div class="logos"><span class="wordmark">FlexUp</span></div>
-          <h3>Startup Strategy Project</h3>
-          <p>Developed a pitch deck for an early-stage startup, focusing on clear structure and investor storytelling.</p>
-          <a href="https://www.canva.com/design/DAG1ZVDCeFs/J5LSZ62V4l6t9UJlrweYoA/edit" target="_blank" rel="noopener">Access the pitch deck →</a>
-        </div>
-        <div class="card">
-          <div class="logos"><img src="assets/img/loreal.jpg" alt="L'Oréal Paris"><img src="assets/img/lays.png" alt="Lay's"></div>
-          <h3>Marketing Campaign Project</h3>
-          <p>Handled product promotion and positioning, turning creative ideas into clear messages for consumers.</p>
-        </div>
-        <div class="card">
-          <div class="logos"><img src="assets/img/bdi.jpg" alt="Bureau des Internationaux, Audencia"></div>
-          <h3>Events and Communication</h3>
-          <p>Planned and coordinated large-scale events for 200+ participants, managing logistics and on-site execution.</p>
-          <a href="https://www.instagram.com/bdibachelor/" target="_blank" rel="noopener">Access the Instagram page →</a>
-        </div>
       </div>
     </div>
   </section>
