@@ -174,10 +174,10 @@
   .card p{font-size:.85rem;color:#333}
   .card a{display:inline-block;margin-top:10px;font-size:.8rem;font-weight:600}
   .wordmark{font-weight:800;font-size:1.7rem;color:#1b5fa8;letter-spacing:-.02em}
-  .tools{display:flex;flex-wrap:wrap;gap:14px 30px;margin-top:12px}
+  .tools{display:grid;grid-template-columns:repeat(3,max-content);gap:16px 44px;margin-top:12px}
   .tgroup{display:flex;flex-direction:column;gap:7px}
   .tlabel{font-size:.7rem;color:#999;font-weight:500}
-  .ticons{display:flex;gap:12px;align-items:center}
+  .ticons{display:flex;gap:11px;align-items:center}
   .ticons img{height:20px;width:auto}
 
   /* Strengths */
@@ -198,6 +198,7 @@
     section{padding:52px 0}
     .menu a:not(.btn){display:none}
     .btn-li span{display:none}
+    .tools{grid-template-columns:repeat(2,max-content);gap:14px 30px}
     .menu{gap:8px}
     .hero{padding:64px 0 52px}
     .stats{grid-template-columns:1fr 1fr}
