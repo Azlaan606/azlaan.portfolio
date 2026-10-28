@@ -162,6 +162,15 @@
   .kfact b{display:block;font-size:1.6rem;color:var(--green);line-height:1.1}
   .kfact span{font-size:.86rem;color:#444}
 
+
+  /* Company heads */
+  .co-head{display:flex;align-items:center;gap:18px;margin-bottom:16px}
+  .co-head img{width:auto;flex:none}
+  .co-head h2{margin:0;line-height:1.2}
+  .co-head .meta{color:var(--muted);font-size:.88rem;margin-top:2px}
+  #contact{background:#fafaf8;border-top:1px solid #ececec}
+  footer{background:#fafaf8}
+
   /* Education */
   .about-edu{margin-top:26px;padding-top:20px;border-top:1px solid #eee}
   .edu-logos{display:flex;align-items:flex-end;flex-wrap:wrap;gap:16px 40px;margin-top:10px}
@@ -234,6 +243,7 @@
     .timeline .logo img{max-width:100px;max-height:32px}
     .cards{grid-template-columns:1fr 1fr}
     .maki-grid,.case{grid-template-columns:1fr}
+    .co-head{flex-direction:column;align-items:flex-start;gap:10px}
     .skills{padding:40px 0 4px}
       .case{gap:24px}
     .edu-logos{gap:16px 28px}
@@ -321,7 +331,7 @@
     <div class="wrap">
       <h2>Career Journey</h2>
       <div class="timeline">
-        <div class="item"><div class="logo"><img src="assets/img/kpmg.png" alt="KPMG"></div><div class="dot"></div><div><div class="date">Jan - Mar 2024</div><div class="role">Audit Intern</div></div></div>
+        <div class="item"><div class="logo"><img src="assets/img/kpmg.png" alt="KPMG"></div><div class="dot"></div><div><div class="date">Jan - Mar 2024</div><div class="role">Auditor</div></div></div>
         <div class="item"><div class="logo"><img src="assets/img/gurufocus.png" alt="GuruFocus"></div><div class="dot"></div><div><div class="date">Mar - Jun 2025</div><div class="role">Market Research &amp; Equity Analysis</div></div></div>
         <div class="item"><div class="logo"><img src="assets/img/seeking-alpha.png" alt="Seeking Alpha"></div><div class="dot"></div><div><div class="date">Apr - Aug 2025</div><div class="role">Financial Analyst</div></div></div>
         <div class="item"><div class="logo"><img src="assets/img/alucab.png" alt="Alu-Cab"></div><div class="dot"></div><div><div class="date">Jun - Aug 2025</div><div class="role">Project &amp; Client Relation (B2B, B2C)</div></div></div>
@@ -375,8 +385,7 @@
     <div class="wrap">
       <div class="case">
         <div class="case-text">
-          <p class="eyebrow">Equity research · Seeking Alpha</p>
-          <h2>Financial Analyst</h2>
+          <div class="co-head"><img src="assets/img/seeking-alpha.png" alt="Seeking Alpha" style="height:30px"><div><h2>Financial Analyst</h2><p class="meta">Equity research</p></div></div>
           <p class="case-lead">My Super Micro Computer (SMCI) analysis <span class="hl">ranked #1 on Google</span>. Across 7+ published equity research articles, I turned financial models and industry analysis into clear investment theses for retail and professional investors.</p>
           <ul class="case-points">
             <li>Built independent valuation models, tracking ROIC and free cash flow</li>
@@ -400,8 +409,7 @@
           <figcaption><button data-umami-event="Alu-Cab video full size" type="button" class="vid-big" onclick="var d=document.getElementById('vidbox');d.showModal();d.querySelector('video').play()">⤢ Watch full size</button> · Recreated with sample data in place of real client details.</figcaption>
         </figure>
         <div class="case-text">
-          <p class="eyebrow">Client operations &amp; sales · Alu-Cab</p>
-          <h2>Project Development (B2B, B2C)</h2>
+          <div class="co-head"><img src="assets/img/alucab.png" alt="Alu-Cab" style="height:30px"><div><h2>Project Development (B2B, B2C)</h2><p class="meta">Client operations &amp; sales</p></div></div>
           <p class="case-lead">Ran 50+ client accounts through an operating system I built in Notion, while selling to customers every day: from first enquiry and quote to fitting, payment and follow-up.</p>
           <ul class="case-points">
             <li>Built the shared workspace and SOPs for bookings, repairs and payments</li>
@@ -417,13 +425,12 @@
     <div class="wrap">
       <div class="case">
         <div class="case-text">
-          <p class="eyebrow">Audit · KPMG Mongolia</p>
-          <h2>Audit Intern</h2>
-          <p class="case-lead">Audited multinational clients including Huawei and Japan Airport Management, and helped consolidate the statements of Tavan Bogd Group (Toyota, KFC).</p>
+          <div class="co-head"><img src="assets/img/kpmg.png" alt="KPMG" style="height:38px"><div><h2>Auditor</h2><p class="meta">Audit · KPMG Mongolia</p></div></div>
+          <p class="case-lead">Audited multinational clients including <span class="hl">Huawei</span> and <span class="hl">Japan Airport Management</span>, and helped consolidate the statements of <span class="hl">Tavan Bogd Group</span> (Toyota, KFC).</p>
           <ul class="case-points">
-            <li>Prepared working papers across the audit file</li>
-            <li>Confirmed client cash balances directly with five major Mongolian banks, ahead of deadlines</li>
-            <li>Reviewed revenue lines during the group consolidation</li>
+            <li>Prepared 150+ audit working papers across client files</li>
+            <li>Verified $50M+ in client cash balances with five major Mongolian banks, with reconciliations completed ahead of deadlines</li>
+            <li>Reviewed $250M in revenue during the Tavan Bogd Group consolidation</li>
           </ul>
         </div>
         <div class="kfacts">
