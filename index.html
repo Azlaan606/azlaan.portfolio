@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400..800&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#ffffff; --ink:#111111; --muted:#555555; --green:#1d4a3a; --line:#d9d9d9; --soft:#f5f5f2;
@@ -142,6 +142,35 @@
   .case-points li{margin-bottom:4px}
   .case-slide img{aspect-ratio:16/9;object-fit:cover}
 
+
+  /* Education & toolkit strip */
+  .skills{padding:64px 0;border-top:1px solid #eee;border-bottom:1px solid #eee;background:#fcfcfa}
+  .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .skills-col{padding:0 48px}
+  .skills-col:first-child{padding-left:0;border-right:1px solid #e6e6e6}
+  .skills-col:last-child{padding-right:0}
+  .skills .eyebrow{margin-bottom:22px}
+  .skills .edu-logos{display:grid;grid-template-columns:1fr 1fr;gap:30px 32px;margin-top:0}
+  .skills .edu-item{gap:9px}
+  .skills .edu-item span{font-size:.82rem}
+  .skills .tools{grid-template-columns:1fr 1fr;gap:28px 32px;margin-top:0}
+  .skills .tgroup{gap:10px}
+  .skills .tlabel{font-size:.74rem;color:#888}
+  .skills .ticons{gap:14px;flex-wrap:wrap}
+  .skills .ticons img{height:24px}
+
+  /* Scroll highlights */
+  .hl{font-weight:inherit;color:inherit;transition:font-weight .6s ease,color .6s ease;}
+  .hl.on{font-weight:650;color:#000}
+  @media (prefers-reduced-motion:reduce){.hl{transition:none}}
+
+
+  /* KPMG */
+  .kfacts{display:grid;grid-template-columns:1fr;gap:14px}
+  .kfact{border:1px solid #e6e6e6;border-radius:14px;padding:18px 20px;background:#fff}
+  .kfact b{display:block;font-size:1.6rem;color:var(--green);line-height:1.1}
+  .kfact span{font-size:.86rem;color:#444}
+
   /* Education */
   .about-edu{margin-top:26px;padding-top:20px;border-top:1px solid #eee}
   .edu-logos{display:flex;align-items:flex-end;flex-wrap:wrap;gap:16px 40px;margin-top:10px}
@@ -214,6 +243,9 @@
     .timeline .logo img{max-width:100px;max-height:32px}
     .cards{grid-template-columns:1fr 1fr}
     .maki-grid,.case{grid-template-columns:1fr}
+    .skills{padding:48px 0}
+    .skills-grid{grid-template-columns:1fr;gap:40px}
+    .skills-col,.skills-col:first-child,.skills-col:last-child{padding:0;border:none}
       .case{gap:24px}
     .edu-logos{gap:16px 28px}
     .maki-head{flex-direction:column;align-items:flex-start;gap:10px}
@@ -269,6 +301,21 @@
 </header>
 
 <main>
+  <section id="skills" class="skills">
+    <div class="wrap">
+      <div class="skills-grid">
+        <div class="skills-col">
+          <p class="eyebrow">Education &amp; courses</p>
+          <div class="edu-logos"><div class="edu-item"><img src="assets/img/edu/audencia.svg" alt="Audencia Business School" style="height:26px"><span>Bachelor in Management</span></div><div class="edu-item"><img src="assets/img/edu/mit.svg" alt="MIT" style="height:26px"><span>Micro &amp; Macroeconomics</span></div><div class="edu-item"><img src="assets/img/edu/harvard.png" alt="Harvard Innovation Labs" style="height:34px"><span>Startup Secrets</span></div><div class="edu-item"><img src="assets/img/edu/yc.svg" alt="Y Combinator" style="height:26px"><span>Startup School</span></div></div>
+        </div>
+        <div class="skills-col">
+          <p class="eyebrow">Everyday toolkit</p>
+          <div class="tools" aria-label="Tools I use"><div class="tgroup"><span class="tlabel">AI</span><div class="ticons"><img src="assets/img/tools/chatgpt.svg" alt="ChatGPT" title="ChatGPT"><img src="assets/img/tools/claude.svg" alt="Claude" title="Claude"></div></div><div class="tgroup"><span class="tlabel">Automation</span><div class="ticons"><img src="assets/img/tools/n8n.svg" alt="n8n" title="n8n"><img src="assets/img/tools/zapier.svg" alt="Zapier" title="Zapier"><img src="assets/img/tools/make.svg" alt="Make.com" title="Make.com"></div></div><div class="tgroup"><span class="tlabel">Workspace &amp; office</span><div class="ticons"><img src="assets/img/tools/notion.svg" alt="Notion" title="Notion"><img src="assets/img/tools/obsidian.svg" alt="Obsidian" title="Obsidian"><img src="assets/img/tools/slack.svg" alt="Slack" title="Slack"><img src="assets/img/tools/microsoft365.svg" alt="Microsoft 365" title="Microsoft 365"><img src="assets/img/tools/googleworkspace.svg" alt="Google Workspace" title="Google Workspace"></div></div><div class="tgroup"><span class="tlabel">Sales &amp; design</span><div class="ticons"><img src="assets/img/tools/salesforce.svg" alt="Salesforce" title="Salesforce"><img src="assets/img/tools/outreach.png" alt="Outreach" title="Outreach"><img src="assets/img/tools/lemlist.svg" alt="Lemlist" title="Lemlist"><img src="assets/img/tools/figma.svg" alt="Figma" title="Figma"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="about">
     <div class="wrap">
       <h2>About Me</h2>
@@ -278,14 +325,6 @@
           <p>At MakiPeople I built demos, sales decks and one-pagers alongside executives, and led the push to automate how demos get prepared. At Alu-Cab I ran client operations and sales. At KPMG I worked in audit and client compliance.</p>
           <p>Alongside this, I’m building a venture from the ground up: mapping the full value chain, working through each bottleneck one at a time, building the financial model, reading regulations at the primary source, studying the competition and pitching to investors.</p>
           <p>I follow market trends, world news and geopolitics, and keep a close eye on AI and robotics.</p>
-          <div class="about-edu">
-            <p class="eyebrow">Education &amp; courses</p>
-            <div class="edu-logos"><div class="edu-item"><img src="assets/img/edu/audencia.svg" alt="Audencia Business School" style="height:26px"><span>Bachelor in Management</span></div><div class="edu-item"><img src="assets/img/edu/mit.svg" alt="MIT" style="height:26px"><span>Micro &amp; Macroeconomics</span></div><div class="edu-item"><img src="assets/img/edu/harvard.png" alt="Harvard Innovation Labs" style="height:30px"><span>Startup Secrets</span></div><div class="edu-item"><img src="assets/img/edu/yc.svg" alt="Y Combinator" style="height:26px"><span>Startup School</span></div></div>
-          </div>
-          <div class="about-edu">
-            <p class="eyebrow">Everyday toolkit</p>
-            <div class="tools" aria-label="Tools I use"><div class="tgroup"><span class="tlabel">AI</span><div class="ticons"><img src="assets/img/tools/chatgpt.svg" alt="ChatGPT" title="ChatGPT"><img src="assets/img/tools/claude.svg" alt="Claude" title="Claude"></div></div><div class="tgroup"><span class="tlabel">Automation</span><div class="ticons"><img src="assets/img/tools/n8n.svg" alt="n8n" title="n8n"><img src="assets/img/tools/zapier.svg" alt="Zapier" title="Zapier"><img src="assets/img/tools/make.svg" alt="Make.com" title="Make.com"></div></div><div class="tgroup"><span class="tlabel">Workspace &amp; office</span><div class="ticons"><img src="assets/img/tools/notion.svg" alt="Notion" title="Notion"><img src="assets/img/tools/obsidian.svg" alt="Obsidian" title="Obsidian"><img src="assets/img/tools/slack.svg" alt="Slack" title="Slack"><img src="assets/img/tools/microsoft365.svg" alt="Microsoft 365" title="Microsoft 365"><img src="assets/img/tools/googleworkspace.svg" alt="Google Workspace" title="Google Workspace"></div></div><div class="tgroup"><span class="tlabel">Sales &amp; design</span><div class="ticons"><img src="assets/img/tools/salesforce.svg" alt="Salesforce" title="Salesforce"><img src="assets/img/tools/outreach.png" alt="Outreach" title="Outreach"><img src="assets/img/tools/lemlist.svg" alt="Lemlist" title="Lemlist"><img src="assets/img/tools/figma.svg" alt="Figma" title="Figma"></div></div></div>
-          </div>
         </div>
       </div>
     </div>
@@ -314,16 +353,16 @@
           <p class="meta">GTM team · Sales Ops &amp; Enablement</p>
         </div>
       </div>
-      <p class="maki-intro">Supported enterprise deals and tenders for companies like Nike, Mastercard and NatWest at an AI hiring company, working day to day with BDRs, Account Executives and the founders, and keeping engineering, data and customer success in the loop.</p>
+      <p class="maki-intro"><span class="hl">Supported enterprise deals and tenders</span> for companies like Nike, Mastercard and NatWest at an AI hiring company, <span class="hl">working day to day with BDRs, Account Executives and the founders</span>, and keeping engineering, data and customer success in the loop.</p>
 
       <div class="maki-grid">
         <article class="mcard">
           <h3>In the deal with Account Executives</h3>
-          <p>Scoped each enterprise demo request with the AE, built an AI proof-of-concept tailored to the prospect, and supported it through the sales cycle across 10+ industries. Within 8 weeks I was working directly with AEs and senior stakeholders on my own.</p>
+          <p>Scoped each enterprise demo request with the AE, built an AI proof-of-concept tailored to the prospect, and supported it through the sales cycle <span class="hl">across 10+ industries</span>. Within 8 weeks I was <span class="hl">working directly with AEs and senior stakeholders</span> on my own.</p>
         </article>
         <article class="mcard">
           <h3>Enterprise RFP &amp; RFI tenders</h3>
-          <p>Contributed to 6 enterprise tenders for Nike, Mastercard, NatWest, Decathlon, Thales and Wayfair, and built a client-facing EU AI Act compliance presentation.</p>
+          <p><span class="hl">Contributed to 6 enterprise tenders</span> for Nike, Mastercard, NatWest, Decathlon, Thales and Wayfair, and built a client-facing <span class="hl">EU AI Act compliance presentation</span>.</p>
         </article>
         <article class="mcard">
           <h3>Enabling the BDR &amp; AE team</h3>
@@ -331,7 +370,7 @@
         </article>
         <article class="mcard">
           <h3>Automating the sales workflow</h3>
-          <p>Proposed and led the Q2 initiative to cut demo prep to under 30 minutes and unlock self-serve demos for AEs, working daily with engineering. Built with Salesforce, Storylane, Make.com and Maki’s in-house tool on Google Colab.</p>
+          <p><span class="hl">Proposed and led the Q2 initiative</span> to <span class="hl">cut demo prep to under 30 minutes</span> and unlock self-serve demos for AEs, working daily with engineering. Built with <span class="hl">Salesforce, Storylane, Make.com</span> and Maki’s in-house tool on Google Colab.</p>
         </article>
       </div>
 
@@ -351,7 +390,7 @@
         <div class="case-text">
           <p class="eyebrow">Equity research · Seeking Alpha</p>
           <h2>Financial Analyst</h2>
-          <p class="case-lead">My Super Micro Computer (SMCI) analysis ranked #1 on Google. Across 7+ published equity research articles, I turned financial models and industry analysis into clear investment theses for retail and professional investors.</p>
+          <p class="case-lead">My Super Micro Computer (SMCI) analysis <span class="hl">ranked #1 on Google</span>. Across 7+ published equity research articles, I turned financial models and industry analysis into clear investment theses for retail and professional investors.</p>
           <ul class="case-points">
             <li>Built independent valuation models, tracking ROIC and free cash flow</li>
             <li>Assessed management strategy and long-term value creation</li>
@@ -382,6 +421,28 @@
             <li>Streamlined order and delivery with the operations team, cutting turnaround time</li>
             <li>Ran market analysis to position new product lines in the premium segment</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kpmg">
+    <div class="wrap">
+      <div class="case">
+        <div class="case-text">
+          <p class="eyebrow">Audit · KPMG Mongolia</p>
+          <h2>Audit Intern</h2>
+          <p class="case-lead">Audited multinational clients including Huawei and Japan Airport Management, and helped consolidate the statements of Tavan Bogd Group (Toyota, KFC).</p>
+          <ul class="case-points">
+            <li>Prepared working papers across the audit file</li>
+            <li>Confirmed client cash balances directly with five major Mongolian banks, ahead of deadlines</li>
+            <li>Reviewed revenue lines during the group consolidation</li>
+          </ul>
+        </div>
+        <div class="kfacts">
+          <div class="kfact"><b>150+</b><span>audit working papers prepared</span></div>
+          <div class="kfact"><b>$50M+</b><span>in cash balances verified with 5 banks</span></div>
+          <div class="kfact"><b>$250M</b><span>in revenue reviewed for a group consolidation</span></div>
         </div>
       </div>
     </div>
@@ -446,6 +507,11 @@
 <script>
 document.querySelectorAll('.shot-btn[data-img]').forEach(function(b){b.addEventListener('click',function(){
   var d=document.getElementById('lightbox');document.getElementById('lb-img').src=b.dataset.img;document.getElementById('lb-cap').textContent=b.dataset.cap;d.showModal();});});
+</script>
+<script>
+(function(){var els=document.querySelectorAll('.hl');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -25% 0px'});
+els.forEach(function(e){io.observe(e)})})();
 </script>
 </body>
 </html>
