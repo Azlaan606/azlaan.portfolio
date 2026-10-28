@@ -143,26 +143,17 @@
   .case-slide img{aspect-ratio:16/9;object-fit:cover}
 
 
-  /* Education & toolkit strip */
-  .skills{padding:64px 0;border-top:1px solid #eee;border-bottom:1px solid #eee;background:#fcfcfa}
-  .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-  .skills-col{padding:0 48px}
-  .skills-col:first-child{padding-left:0;border-right:1px solid #e6e6e6}
-  .skills-col:last-child{padding-right:0}
-  .skills .eyebrow{margin-bottom:22px}
-  .skills .edu-logos{display:grid;grid-template-columns:1fr 1fr;gap:30px 32px;margin-top:0}
-  .skills .edu-item{gap:9px}
-  .skills .edu-item span{font-size:.82rem}
-  .skills .tools{grid-template-columns:1fr 1fr;gap:28px 32px;margin-top:0}
-  .skills .tgroup{gap:10px}
-  .skills .tlabel{font-size:.74rem;color:#888}
-  .skills .ticons{gap:14px;flex-wrap:wrap}
-  .skills .ticons img{height:24px}
+  /* Education & toolkit (above About) */
+  .skills{padding:16px 0 8px}
+  .skills-block{padding:22px 0 26px;border-top:1px solid #eee}
+  .skills-block:last-child{border-bottom:1px solid #eee}
+  .skills .eyebrow{margin-bottom:14px}
 
   /* Scroll highlights */
-  .hl{font-weight:inherit;color:inherit;transition:font-weight .6s ease,color .6s ease;}
-  .hl.on{font-weight:650;color:#000}
-  @media (prefers-reduced-motion:reduce){.hl{transition:none}}
+  .hl .w{display:inline-grid;transform-origin:50% 80%;transition:transform .45s cubic-bezier(.2,.7,.2,1),color .45s ease,font-weight .45s ease;transition-delay:calc(var(--i)*55ms)}
+  .hl .w::after{content:attr(data-t);font-weight:700;visibility:hidden;height:0;overflow:hidden}
+  .hl.on .w{font-weight:700;color:#000;transform:scale(1.025)}
+  @media (prefers-reduced-motion:reduce){.hl .w{transition:none;transform:none!important}}
 
 
   /* KPMG */
@@ -243,9 +234,7 @@
     .timeline .logo img{max-width:100px;max-height:32px}
     .cards{grid-template-columns:1fr 1fr}
     .maki-grid,.case{grid-template-columns:1fr}
-    .skills{padding:48px 0}
-    .skills-grid{grid-template-columns:1fr;gap:40px}
-    .skills-col,.skills-col:first-child,.skills-col:last-child{padding:0;border:none}
+    .skills{padding:40px 0 4px}
       .case{gap:24px}
     .edu-logos{gap:16px 28px}
     .maki-head{flex-direction:column;align-items:flex-start;gap:10px}
@@ -303,15 +292,13 @@
 <main>
   <section id="skills" class="skills">
     <div class="wrap">
-      <div class="skills-grid">
-        <div class="skills-col">
+      <div class="skills-block">
           <p class="eyebrow">Education &amp; courses</p>
-          <div class="edu-logos"><div class="edu-item"><img src="assets/img/edu/audencia.svg" alt="Audencia Business School" style="height:26px"><span>Bachelor in Management</span></div><div class="edu-item"><img src="assets/img/edu/mit.svg" alt="MIT" style="height:26px"><span>Micro &amp; Macroeconomics</span></div><div class="edu-item"><img src="assets/img/edu/harvard.png" alt="Harvard Innovation Labs" style="height:34px"><span>Startup Secrets</span></div><div class="edu-item"><img src="assets/img/edu/yc.svg" alt="Y Combinator" style="height:26px"><span>Startup School</span></div></div>
-        </div>
-        <div class="skills-col">
+          <div class="edu-logos"><div class="edu-item"><img src="assets/img/edu/audencia.svg" alt="Audencia Business School" style="height:26px"><span>Bachelor in Management</span></div><div class="edu-item"><img src="assets/img/edu/mit.svg" alt="MIT" style="height:26px"><span>Micro &amp; Macroeconomics</span></div><div class="edu-item"><img src="assets/img/edu/harvard.png" alt="Harvard Innovation Labs" style="height:30px"><span>Startup Secrets</span></div><div class="edu-item"><img src="assets/img/edu/yc.svg" alt="Y Combinator" style="height:26px"><span>Startup School</span></div></div>
+      </div>
+      <div class="skills-block">
           <p class="eyebrow">Everyday toolkit</p>
           <div class="tools" aria-label="Tools I use"><div class="tgroup"><span class="tlabel">AI</span><div class="ticons"><img src="assets/img/tools/chatgpt.svg" alt="ChatGPT" title="ChatGPT"><img src="assets/img/tools/claude.svg" alt="Claude" title="Claude"></div></div><div class="tgroup"><span class="tlabel">Automation</span><div class="ticons"><img src="assets/img/tools/n8n.svg" alt="n8n" title="n8n"><img src="assets/img/tools/zapier.svg" alt="Zapier" title="Zapier"><img src="assets/img/tools/make.svg" alt="Make.com" title="Make.com"></div></div><div class="tgroup"><span class="tlabel">Workspace &amp; office</span><div class="ticons"><img src="assets/img/tools/notion.svg" alt="Notion" title="Notion"><img src="assets/img/tools/obsidian.svg" alt="Obsidian" title="Obsidian"><img src="assets/img/tools/slack.svg" alt="Slack" title="Slack"><img src="assets/img/tools/microsoft365.svg" alt="Microsoft 365" title="Microsoft 365"><img src="assets/img/tools/googleworkspace.svg" alt="Google Workspace" title="Google Workspace"></div></div><div class="tgroup"><span class="tlabel">Sales &amp; design</span><div class="ticons"><img src="assets/img/tools/salesforce.svg" alt="Salesforce" title="Salesforce"><img src="assets/img/tools/outreach.png" alt="Outreach" title="Outreach"><img src="assets/img/tools/lemlist.svg" alt="Lemlist" title="Lemlist"><img src="assets/img/tools/figma.svg" alt="Figma" title="Figma"></div></div></div>
-        </div>
       </div>
     </div>
   </section>
@@ -509,8 +496,10 @@ document.querySelectorAll('.shot-btn[data-img]').forEach(function(b){b.addEventL
   var d=document.getElementById('lightbox');document.getElementById('lb-img').src=b.dataset.img;document.getElementById('lb-cap').textContent=b.dataset.cap;d.showModal();});});
 </script>
 <script>
-(function(){var els=document.querySelectorAll('.hl');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
-var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -25% 0px'});
+(function(){var els=document.querySelectorAll('.hl');
+els.forEach(function(el){var t=el.textContent.split(' ');el.textContent='';t.forEach(function(w,i){var sp=document.createElement('span');sp.className='w';sp.style.setProperty('--i',i);sp.setAttribute('data-t',w);sp.textContent=w;el.appendChild(sp);if(i<t.length-1)el.appendChild(document.createTextNode(' '))})});
+if(!('IntersectionObserver' in window))return;
+var io=new IntersectionObserver(function(en){en.forEach(function(e){e.target.classList.toggle('on',e.isIntersecting)})},{rootMargin:'-30% 0px -30% 0px'});
 els.forEach(function(e){io.observe(e)})})();
 </script>
 </body>
