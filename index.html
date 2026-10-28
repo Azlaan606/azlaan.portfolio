@@ -171,6 +171,19 @@
   #contact{padding-top:0}
   #contact .wrap{border-top:1px solid #ececec;padding-top:64px}
 
+
+  /* Founder */
+  .f-head{margin-bottom:18px}
+  .f-head h2{margin:0;line-height:1.2}
+  .f-head .meta{color:var(--muted);font-size:.9rem;margin-top:2px}
+  .f-lead{max-width:820px;font-size:1.05rem;color:#222;margin-bottom:24px}
+  .f-stop{margin-top:18px;border:1px solid #e6ebe8;border-radius:14px;padding:22px;background:#fff}
+  .f-stop h3{font-size:1rem;color:var(--green);margin-bottom:10px}
+  .f-stop ul{padding-left:18px;display:grid;grid-template-columns:1fr 1fr;gap:8px 32px}
+  .f-stop li{font-size:.9rem;color:#333}
+  .linkbtn{font:inherit;background:none;border:none;padding:0;color:var(--green);font-weight:600;text-decoration:underline;cursor:pointer}
+  .f-note{font-size:.75rem;color:#999;margin-top:12px}
+
   /* Education */
   .about-edu{margin-top:26px;padding-top:20px;border-top:1px solid #eee}
   .edu-logos{display:flex;align-items:flex-end;flex-wrap:wrap;gap:16px 40px;margin-top:10px}
@@ -243,6 +256,7 @@
     .timeline .logo img{max-width:100px;max-height:32px}
     .cards{grid-template-columns:1fr 1fr}
     .maki-grid,.case{grid-template-columns:1fr}
+    .f-stop ul{grid-template-columns:1fr}
     .co-head{flex-direction:column;align-items:flex-start;gap:10px}
     .skills{padding:40px 0 4px}
       .case{gap:24px}
@@ -381,6 +395,53 @@
     </div>
   </section>
 
+  <section id="founder">
+    <div class="wrap">
+      <div class="f-head">
+        <h2>Founder</h2>
+        <p class="meta">Circular-economy venture · Jaipur, India · 14 months, 2025–2026</p>
+      </div>
+      <p class="f-lead">India’s new Solid Waste Management Rules came into force on 1 April 2026: waste must be separated into four streams, and large housing societies must process their wet waste or pay for it. I designed a company to take that off Jaipur’s housing societies for <span class="hl">₹50 per household a month</span>. I read the law in the gazette, <span class="hl">mapped 14 permits</span>, built the per-tonne economics, <span class="hl">spoke with two businesses already running waste operations</span> and drew the full facility blueprint. Then the numbers told me to stop.</p>
+
+      <div class="maki-grid">
+        <article class="mcard">
+          <h3>Three business models, tested and dropped</h3>
+          <p><b>EPR credit aggregation:</b> the credit revenue existed on paper, and cheap fake credits were already in the market. <b>A ₹42 lakh, 5-tonne-a-day dry-waste plant:</b> too much capital before a single paying customer. <b>Wet-waste collection for housing societies:</b> the one that made it to a blueprint.</p>
+        </article>
+        <article class="mcard">
+          <h3>Biogas and electricity</h3>
+          <p>India’s flagship Indore plant takes 550 t of wet waste a day to make about 17 t of bio-CNG, roughly <span class="hl">32 t of waste per tonne of gas</span>. A 5-tonne-a-day gas plant in Jaipur would need the kitchen waste of about 160,000–220,000 households, every day. Energy plan: sell the gas to the city-gas network, buy grid power, run on solar by day.</p>
+        </article>
+        <article class="mcard">
+          <h3>The law, read at the source</h3>
+          <p>Worked from the SWM Rules 2026 gazette and three Supreme Court orders from 2026. A society becomes a bulk waste generator at 100 kg of waste a day, 40,000 litres of water a day or 20,000 m². Mapped 14 permits across the state pollution board, the municipal corporation, the fire department and company registration.</p>
+        </article>
+        <article class="mcard">
+          <h3>Facility, process and operations</h3>
+          <p>Trucks timed to the shredder, every load weighed and logged per society, no hands on the waste, turned rows under a roof with the hall air treated, and leachate sprayed back onto the piles. Searched India for a profitable private wet-waste operator at this scale: the plants that work are public-private or subsidy-backed.</p>
+        </article>
+      </div>
+
+      <p class="gallery-title">Phase 1 blueprint <span>Concept drawings, not to scale</span></p>
+      <div class="gallery" style="grid-template-columns:repeat(3,1fr)">
+        <button data-umami-event="Founder: collection" type="button" class="shot-btn" data-img="assets/img/venture/collection.jpg" data-cap="Collection from housing societies and truck arrivals timed to the shredder."><img src="assets/img/venture/collection-t.jpg" alt="Blueprint: collection and timed truck arrivals" loading="lazy" style="object-position:center"><span>Collection &amp; timed arrivals</span></button>
+        <button data-umami-event="Founder: receiving" type="button" class="shot-btn" data-img="assets/img/venture/receiving.jpg" data-cap="Weighbridge, tipping bay, pusher and shredder: every load logged, no hands on the waste."><img src="assets/img/venture/receiving-t.jpg" alt="Blueprint: weighing, tipping and shredding" loading="lazy" style="object-position:center"><span>Weigh, tip, shred</span></button>
+        <button data-umami-event="Founder: composting" type="button" class="shot-btn" data-img="assets/img/venture/composting.jpg" data-cap="Enclosed conveyor, machine-turned rows under a roof, hall air treatment and leachate recirculation."><img src="assets/img/venture/composting-t.jpg" alt="Blueprint: composting hall, air treatment and leachate" loading="lazy" style="object-position:center"><span>Compost, air &amp; liquid</span></button>
+      </div>
+
+      <div class="f-stop">
+        <h3>Why I stopped</h3>
+        <ul>
+          <li><b>The fee barely covers the work.</b> ₹50 per household is about ₹1,700–2,300 per tonne, against ₹700–2,300 to collect and ₹500–943 to process at municipal rates: <span class="hl">break-even to loss before rent.</span></li>
+          <li><b>No second revenue.</b> Compost sells for about ₹2.5–3 a kg at a 10–30% yield, roughly ₹250–900 per tonne of waste in.</li>
+          <li><b>Heavy before day one.</b> 11 pieces of plant, 3–4 trucks and 14 permits before the first tonne. It sits in the worst corner of the <button type="button" class="linkbtn" data-img="assets/img/venture/capital-chart.svg" data-cap="Capital intensity against potential: where the Phase 1 venture sits." data-umami-event="Founder: capital chart">capital-intensity matrix</button>.</li>
+          <li><b>Founder fit.</b> A solo founder with no operating experience in waste, in a market where profitable plants run on public contracts or subsidy.</li>
+        </ul>
+        <p class="f-note">Figures are my own research estimates at the time of each decision.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="seekingalpha">
     <div class="wrap">
       <div class="case">
@@ -481,7 +542,7 @@
   </div>
 </dialog>
 <script>
-document.querySelectorAll('.shot-btn[data-img]').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.shot-btn[data-img],.linkbtn[data-img]').forEach(function(b){b.addEventListener('click',function(){
   var d=document.getElementById('lightbox');document.getElementById('lb-img').src=b.dataset.img;document.getElementById('lb-cap').textContent=b.dataset.cap;d.showModal();});});
 </script>
 <script>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, Arial, sans-serif">
+  <rect width="900" height="620" fill="#ffffff"/>
+  <!-- quadrant fills -->
+  <rect x="190" y="60" width="320" height="230" fill="#fbeee9"/>
+  <rect x="510" y="60" width="320" height="230" fill="#f6f6f3"/>
+  <rect x="190" y="290" width="320" height="230" fill="#f6f6f3"/>
+  <rect x="510" y="290" width="320" height="230" fill="#e9f1ed"/>
+  <rect x="190" y="60" width="640" height="460" fill="none" stroke="#cfcfcf" stroke-width="1.5"/>
+  <line x1="510" y1="60" x2="510" y2="520" stroke="#1d4a3a" stroke-width="2"/>
+  <line x1="190" y1="290" x2="830" y2="290" stroke="#1d4a3a" stroke-width="2"/>
+  <!-- axis labels -->
+  <text x="170" y="82" text-anchor="end" font-size="18" fill="#7a7a6a">Intense</text>
+  <text x="170" y="512" text-anchor="end" font-size="18" fill="#7a7a6a">Efficient</text>
+  <text x="170" y="298" text-anchor="end" font-size="26" font-weight="700" fill="#111">Capital</text>
+  <text x="200" y="560" font-size="18" fill="#7a7a6a">Small</text>
+  <text x="820" y="560" text-anchor="end" font-size="18" fill="#7a7a6a">Large</text>
+  <text x="510" y="566" text-anchor="middle" font-size="26" font-weight="700" fill="#111">Potential</text>
+  <!-- quadrant captions -->
+  <text x="350" y="270" text-anchor="middle" font-size="14" fill="#a8431f">Hardest place to build</text>
+  <text x="670" y="500" text-anchor="middle" font-size="14" fill="#1d4a3a">Where investors want you</text>
+  <!-- venture marker -->
+  <circle cx="300" cy="140" r="13" fill="#a8431f"/>
+  <circle cx="300" cy="140" r="24" fill="none" stroke="#a8431f" stroke-opacity=".35" stroke-width="2"/>
+  <rect x="322" y="112" width="372" height="74" rx="8" fill="#ffffff" stroke="#e6d6cf"/>
+  <text x="334" y="135" font-size="17" font-weight="700" fill="#111">My Phase 1 venture</text>
+  <text x="334" y="157" font-size="14" fill="#555">Plant, trucks and 14 permits before the first tonne;</text>
+  <text x="334" y="175" font-size="14" fill="#555">a ₹50 fee near break-even per tonne</text>
+</svg>
