@@ -176,14 +176,16 @@
   .f-head{margin-bottom:18px}
   .f-head h2{margin:0;line-height:1.2}
   .f-head .meta{color:var(--muted);font-size:.9rem;margin-top:2px}
-  .f-lead{max-width:820px;font-size:1.05rem;color:#222;margin-bottom:24px}
+  .f-lead{max-width:820px;font-size:1.05rem;color:#222;margin-bottom:20px}
+  .f-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
+  .f-stats .stat{text-align:left;padding:16px}
+  .f-stats b{display:block;font-size:1.6rem;color:var(--green);line-height:1.1}
+  .f-stats span{margin-top:6px}
   .f-stop{margin-top:18px;border:1px solid #e6ebe8;border-radius:14px;padding:22px;background:#fff}
   .f-stop h3{font-size:1rem;color:var(--green);margin-bottom:10px}
-  .f-stop ul{padding-left:18px;display:grid;grid-template-columns:1fr 1fr;gap:8px 32px}
+  .f-stop ul{padding-left:18px;display:grid;grid-template-columns:1fr;gap:6px}
   .f-stop li{font-size:.9rem;color:#333}
   .linkbtn{font:inherit;background:none;border:none;padding:0;color:var(--green);font-weight:600;text-decoration:underline;cursor:pointer}
-  .f-next{margin-top:14px;padding-top:12px;border-top:1px solid #eee;font-size:.9rem;color:#333}
-  .f-next b{color:var(--green)}
   .f-note{font-size:.75rem;color:#999;margin-top:12px}
 
 
@@ -192,7 +194,7 @@
   .bp-view{display:block;width:100%;border:none;padding:0;cursor:zoom-in;position:relative;transition:background .3s}
   .bp-view img{width:100%;aspect-ratio:16/7;object-fit:contain;display:block;transition:opacity .25s}
   .bp-zoom{position:absolute;right:12px;bottom:10px;font-size:.72rem;font-weight:600;color:#333;background:rgba(255,255,255,.85);border-radius:6px;padding:3px 8px}
-  .bp-cap{padding:14px 18px 6px;font-size:.92rem;color:#333;min-height:3.6em}
+  .bp-cap{padding:12px 18px 4px;font-size:.92rem;color:#333}
   .bp-cap b{color:var(--green);margin-right:4px}
   .bp-steps{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;padding:8px 14px 16px}
   .bp-step{font:inherit;font-size:.78rem;color:#555;background:#fff;border:1px solid #e3e8e5;border-radius:9px;padding:7px 4px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;transition:border-color .15s,color .15s,background .15s}
@@ -275,6 +277,7 @@
     .maki-grid,.case{grid-template-columns:1fr}
     .f-stop ul{grid-template-columns:1fr}
     .bp-steps{grid-template-columns:repeat(4,1fr)}
+    .f-stats{grid-template-columns:1fr 1fr}
     .bp-view img{aspect-ratio:4/3}
     .co-head{flex-direction:column;align-items:flex-start;gap:10px}
     .skills{padding:40px 0 4px}
@@ -417,46 +420,31 @@
   <section id="founder">
     <div class="wrap">
       <div class="f-head">
-        <h2>Zero to one: a waste business in Jaipur</h2>
-        <p class="meta">Circular economy · India · 14 months, 2025–2026 · from market research to facility blueprint</p>
+        <h2>Zero to one: a waste-management business</h2>
+        <p class="meta">Circular economy · India · 14 months, 2025–2026</p>
       </div>
-      <p class="f-lead">India’s new Solid Waste Management Rules came into force on 1 April 2026: waste must be separated into four streams, and large housing societies must process their wet waste or pay for it. I set out to build a company that takes that off Jaipur’s housing societies for <span class="hl">₹50 per household a month</span>. I read the law in the gazette, <span class="hl">mapped 14 permits</span>, built the per-tonne economics, <span class="hl">spoke with two businesses already running waste operations</span> and drew the full facility blueprint. Then the numbers told me to stop.</p>
-
-      <div class="maki-grid">
-        <article class="mcard">
-          <h3>Three business models, tested and dropped</h3>
-          <p><b>EPR credit aggregation:</b> the credit revenue existed on paper, and cheap fake credits were already in the market. <b>A ₹42 lakh, 5-tonne-a-day dry-waste plant:</b> too much capital before a single paying customer. <b>Wet-waste collection for housing societies:</b> the one that made it to a blueprint.</p>
-        </article>
-        <article class="mcard">
-          <h3>Biogas and electricity</h3>
-          <p>India’s flagship Indore plant takes 550 t of wet waste a day to make about 17 t of bio-CNG, roughly <span class="hl">32 t of waste per tonne of gas</span>. A 5-tonne-a-day gas plant in Jaipur would need the kitchen waste of about 160,000–220,000 households, every day. Energy plan: sell the gas to the city-gas network, buy grid power, run on solar by day.</p>
-        </article>
-        <article class="mcard">
-          <h3>The law, read at the source</h3>
-          <p>Worked from the SWM Rules 2026 gazette and three Supreme Court orders from 2026. A society becomes a bulk waste generator at 100 kg of waste a day, 40,000 litres of water a day or 20,000 m². Mapped 14 permits across the state pollution board, the municipal corporation, the fire department and company registration.</p>
-        </article>
-        <article class="mcard">
-          <h3>Facility, process and operations</h3>
-          <p>Trucks timed to the shredder, every load weighed and logged per society, no hands on the waste, turned rows under a roof with the hall air treated, and leachate sprayed back onto the piles. Searched India for a profitable private wet-waste operator at this scale: the plants that work are public-private or subsidy-backed.</p>
-        </article>
+      <p class="f-lead">From April 2026, India’s large housing societies must separate their waste and process the wet part, or pay. I built the business to do it for them at <span class="hl">₹50 per household a month</span>, from the law and the per-tonne economics to an 8-step facility blueprint, then <span class="hl">stopped it on the numbers</span>.</p>
+      <div class="f-stats">
+        <div class="stat"><b>3</b><span>business models tested; EPR credits and a ₹42L recycling plant dropped on the numbers</span></div>
+        <div class="stat"><b>14</b><span>permits mapped across the pollution board, city corporation and fire department</span></div>
+        <div class="stat"><b>32 t</b><span>of wet waste for one tonne of biogas: why society waste alone can’t feed a gas plant</span></div>
+        <div class="stat"><b>2</b><span>businesses already running waste operations, consulted along the way</span></div>
       </div>
 
       <p class="gallery-title">Phase 1 blueprint <span>Concept drawings, not to scale · click through the steps</span></p>
       <div class="bp">
         <button type="button" class="bp-view" id="bp-view" style="background:#c9c3b2" aria-label="Open drawing full size"><img id="bp-img" src="assets/img/venture/s1-collect.jpg" alt="Blueprint step 1: Collect" loading="lazy"><span class="bp-zoom">⤢ Full size</span></button>
-        <p class="bp-cap" id="bp-cap" aria-live="polite"><b>1 · Collect</b> Every flat gets a wet-waste bin and each building a lidded bin station. The crew checks for plastic, then the truck makes one stop per building.</p>
-        <div class="bp-steps"><button type="button" class="bp-step on" data-img="assets/img/venture/s1-collect.jpg" data-bg="#c9c3b2" data-t="Collect" data-c="Every flat gets a wet-waste bin and each building a lidded bin station. The crew checks for plastic, then the truck makes one stop per building." data-umami-event="Blueprint step 1"><b>1</b>Collect</button><button type="button" class="bp-step" data-img="assets/img/venture/s2-transport.jpg" data-bg="#c9c3b2" data-t="Transport" data-c="Trucks leave on timed slots, so each one arrives only when the shredder is free. No queue at the gate." data-umami-event="Blueprint step 2"><b>2</b>Transport</button><button type="button" class="bp-step" data-img="assets/img/venture/s3-weigh.jpg" data-bg="#f3f0e6" data-t="Weigh" data-c="Every load is weighed on arrival and logged per society and per round: the basis for billing and proof of service." data-umami-event="Blueprint step 3"><b>3</b>Weigh</button><button type="button" class="bp-step" data-img="assets/img/venture/s4-tip.jpg" data-bg="#c9c3b2" data-t="Tip" data-c="The tipper reverses in and empties into a low-walled buffer bay. No pit to dig, and the floor drains liquid to a sump." data-umami-event="Blueprint step 4"><b>4</b>Tip</button><button type="button" class="bp-step" data-img="assets/img/venture/s5-shred.jpg" data-bg="#f3f0e6" data-t="Shred" data-c="A push blade feeds the shredder at its own pace. One operator watches from a panel and nobody handles the waste. If the shredder is down, loads go to a partner site." data-umami-event="Blueprint step 5"><b>5</b>Shred</button><button type="button" class="bp-step" data-img="assets/img/venture/s6-convey.jpg" data-bg="#f3f0e6" data-t="Convey" data-c="An enclosed conveyor carries the shredded waste into the composting hall, with a point to mix in dry material." data-umami-event="Blueprint step 6"><b>6</b>Convey</button><button type="button" class="bp-step" data-img="assets/img/venture/s7-compost.jpg" data-bg="#f3f0e6" data-t="Compost" data-c="Long rows under a roof, turned by machine on a schedule. The whole hall’s air is extracted and treated before it leaves." data-umami-event="Blueprint step 7"><b>7</b>Compost</button><button type="button" class="bp-step" data-img="assets/img/venture/s8-leachate.jpg" data-bg="#f3f0e6" data-t="Leachate" data-c="Liquid from the floor channels is pumped to a sealed tank and sprayed back onto the active rows, where the heat dries it off." data-umami-event="Blueprint step 8"><b>8</b>Leachate</button></div>
+        <p class="bp-cap" id="bp-cap" aria-live="polite"><b>1 · Collect</b> A wet-waste bin in every flat, a bin station per building, one truck stop per building.</p>
+        <div class="bp-steps"><button type="button" class="bp-step on" data-img="assets/img/venture/s1-collect.jpg" data-bg="#c9c3b2" data-t="Collect" data-c="A wet-waste bin in every flat, a bin station per building, one truck stop per building." data-umami-event="Blueprint step 1"><b>1</b>Collect</button><button type="button" class="bp-step" data-img="assets/img/venture/s2-transport.jpg" data-bg="#c9c3b2" data-t="Transport" data-c="Trucks run on timed slots, so each arrives only when the shredder is free." data-umami-event="Blueprint step 2"><b>2</b>Transport</button><button type="button" class="bp-step" data-img="assets/img/venture/s3-weigh.jpg" data-bg="#f3f0e6" data-t="Weigh" data-c="Every load weighed and logged per society: the basis for billing and proof of service." data-umami-event="Blueprint step 3"><b>3</b>Weigh</button><button type="button" class="bp-step" data-img="assets/img/venture/s4-tip.jpg" data-bg="#c9c3b2" data-t="Tip" data-c="The truck tips into a low-walled bay. No pit to dig; liquid drains to a sump." data-umami-event="Blueprint step 4"><b>4</b>Tip</button><button type="button" class="bp-step" data-img="assets/img/venture/s5-shred.jpg" data-bg="#f3f0e6" data-t="Shred" data-c="A push blade feeds the shredder. One operator watches; nobody touches the waste." data-umami-event="Blueprint step 5"><b>5</b>Shred</button><button type="button" class="bp-step" data-img="assets/img/venture/s6-convey.jpg" data-bg="#f3f0e6" data-t="Convey" data-c="An enclosed conveyor carries shredded waste to the composting hall." data-umami-event="Blueprint step 6"><b>6</b>Convey</button><button type="button" class="bp-step" data-img="assets/img/venture/s7-compost.jpg" data-bg="#f3f0e6" data-t="Compost" data-c="Machine-turned rows under a roof; the hall’s air is extracted and treated." data-umami-event="Blueprint step 7"><b>7</b>Compost</button><button type="button" class="bp-step" data-img="assets/img/venture/s8-leachate.jpg" data-bg="#f3f0e6" data-t="Leachate" data-c="Liquid is collected, stored and sprayed back onto the rows, where the heat dries it off." data-umami-event="Blueprint step 8"><b>8</b>Leachate</button></div>
       </div>
 
       <div class="f-stop">
         <h3>Why I stopped</h3>
         <ul>
-          <li><b>The fee barely covers the work.</b> ₹50 per household is about ₹1,700–2,300 per tonne, against ₹700–2,300 to collect and ₹500–943 to process at municipal rates: <span class="hl">break-even to loss before rent.</span></li>
-          <li><b>No second revenue.</b> Compost sells for about ₹2.5–3 a kg at a 10–30% yield, roughly ₹250–900 per tonne of waste in.</li>
-          <li><b>Heavy before day one.</b> 11 pieces of plant, 3–4 trucks and 14 permits before the first tonne. It sits in the worst corner of the <button type="button" class="linkbtn" data-img="assets/img/venture/capital-chart.svg" data-cap="Capital intensity against potential: where the Phase 1 venture sits." data-umami-event="Founder: capital chart">capital-intensity matrix</button>.</li>
-          <li><b>Founder fit.</b> A solo founder with no operating experience in waste, in a market where profitable plants run on public contracts or subsidy.</li>
+          <li><b>The fee barely covers the work.</b> ₹50 per household is about ₹1,700–2,300 per tonne, roughly what cities pay just to collect and process it.</li>
+          <li><b>Heavy before day one.</b> 11 pieces of plant, 3–4 trucks and 14 permits before the first tonne: the worst corner of the <button type="button" class="linkbtn" data-img="assets/img/venture/capital-chart.svg" data-cap="Capital intensity against potential: where the Phase 1 business sits." data-umami-event="Founder: capital chart">capital-intensity matrix</button>.</li>
+          <li><b>Wrong first business for me.</b> Solo, with no operating experience in waste, in a market where the profitable plants run on public contracts or subsidy.</li>
         </ul>
-        <p class="f-next"><b>Next time:</b> start with collection only and hand the waste to a licensed plant, so demand is proven before any plant is built.</p>
         <p class="f-note">Figures are my own research estimates at the time of each decision.</p>
       </div>
     </div>
