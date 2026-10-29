@@ -182,7 +182,24 @@
   .f-stop ul{padding-left:18px;display:grid;grid-template-columns:1fr 1fr;gap:8px 32px}
   .f-stop li{font-size:.9rem;color:#333}
   .linkbtn{font:inherit;background:none;border:none;padding:0;color:var(--green);font-weight:600;text-decoration:underline;cursor:pointer}
+  .f-next{margin-top:14px;padding-top:12px;border-top:1px solid #eee;font-size:.9rem;color:#333}
+  .f-next b{color:var(--green)}
   .f-note{font-size:.75rem;color:#999;margin-top:12px}
+
+
+  /* Blueprint stepper */
+  .bp{border:1px solid #e6ebe8;border-radius:14px;overflow:hidden;background:#fff}
+  .bp-view{display:block;width:100%;border:none;padding:0;cursor:zoom-in;position:relative;transition:background .3s}
+  .bp-view img{width:100%;aspect-ratio:16/7;object-fit:contain;display:block;transition:opacity .25s}
+  .bp-zoom{position:absolute;right:12px;bottom:10px;font-size:.72rem;font-weight:600;color:#333;background:rgba(255,255,255,.85);border-radius:6px;padding:3px 8px}
+  .bp-cap{padding:14px 18px 6px;font-size:.92rem;color:#333;min-height:3.6em}
+  .bp-cap b{color:var(--green);margin-right:4px}
+  .bp-steps{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;padding:8px 14px 16px}
+  .bp-step{font:inherit;font-size:.78rem;color:#555;background:#fff;border:1px solid #e3e8e5;border-radius:9px;padding:7px 4px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;transition:border-color .15s,color .15s,background .15s}
+  .bp-step b{font-size:.95rem;color:#999}
+  .bp-step:hover{border-color:var(--green)}
+  .bp-step.on{border-color:var(--green);background:#f1f6f3;color:var(--green);font-weight:600}
+  .bp-step.on b{color:var(--green)}
 
   /* Education */
   .about-edu{margin-top:26px;padding-top:20px;border-top:1px solid #eee}
@@ -257,6 +274,8 @@
     .cards{grid-template-columns:1fr 1fr}
     .maki-grid,.case{grid-template-columns:1fr}
     .f-stop ul{grid-template-columns:1fr}
+    .bp-steps{grid-template-columns:repeat(4,1fr)}
+    .bp-view img{aspect-ratio:4/3}
     .co-head{flex-direction:column;align-items:flex-start;gap:10px}
     .skills{padding:40px 0 4px}
       .case{gap:24px}
@@ -334,7 +353,7 @@
         <div class="about-text">
           <p class="lead">I like working across teams and taking things from idea to done. I automate repeated tasks so the team can focus on new initiatives, and I’m comfortable taking the lead and working independently. I work well with many departments and people: sharing ideas and insights, helping each other, and making sure the work gets done at its best.</p>
           <p>At MakiPeople I built demos, sales decks and one-pagers alongside executives, and led the push to automate how demos get prepared. At Alu-Cab I ran client operations and sales. At KPMG I worked in audit and client compliance.</p>
-          <p>Alongside this, I’m building a venture from the ground up: mapping the full value chain, working through each bottleneck one at a time, building the financial model, reading regulations at the primary source, studying the competition and pitching to investors.</p>
+          <p>I also spent 14 months taking a waste-management business in Jaipur from zero: mapping the full value chain, working through each bottleneck one at a time, building the per-tonne economics, reading the regulations at the primary source and studying the competition. <a data-umami-event="About: zero to one link" class="text-link" href="#founder">See how far I took it →</a></p>
           <p>I follow market trends, world news and geopolitics, and keep a close eye on AI and robotics.</p>
         </div>
       </div>
@@ -398,10 +417,10 @@
   <section id="founder">
     <div class="wrap">
       <div class="f-head">
-        <h2>Founder</h2>
-        <p class="meta">Circular-economy venture · Jaipur, India · 14 months, 2025–2026</p>
+        <h2>Zero to one: a waste business in Jaipur</h2>
+        <p class="meta">Circular economy · India · 14 months, 2025–2026 · from market research to facility blueprint</p>
       </div>
-      <p class="f-lead">India’s new Solid Waste Management Rules came into force on 1 April 2026: waste must be separated into four streams, and large housing societies must process their wet waste or pay for it. I designed a company to take that off Jaipur’s housing societies for <span class="hl">₹50 per household a month</span>. I read the law in the gazette, <span class="hl">mapped 14 permits</span>, built the per-tonne economics, <span class="hl">spoke with two businesses already running waste operations</span> and drew the full facility blueprint. Then the numbers told me to stop.</p>
+      <p class="f-lead">India’s new Solid Waste Management Rules came into force on 1 April 2026: waste must be separated into four streams, and large housing societies must process their wet waste or pay for it. I set out to build a company that takes that off Jaipur’s housing societies for <span class="hl">₹50 per household a month</span>. I read the law in the gazette, <span class="hl">mapped 14 permits</span>, built the per-tonne economics, <span class="hl">spoke with two businesses already running waste operations</span> and drew the full facility blueprint. Then the numbers told me to stop.</p>
 
       <div class="maki-grid">
         <article class="mcard">
@@ -422,11 +441,11 @@
         </article>
       </div>
 
-      <p class="gallery-title">Phase 1 blueprint <span>Concept drawings, not to scale</span></p>
-      <div class="gallery" style="grid-template-columns:repeat(3,1fr)">
-        <button data-umami-event="Founder: collection" type="button" class="shot-btn" data-img="assets/img/venture/collection.jpg" data-cap="Collection from housing societies and truck arrivals timed to the shredder."><img src="assets/img/venture/collection-t.jpg" alt="Blueprint: collection and timed truck arrivals" loading="lazy" style="object-position:center"><span>Collection &amp; timed arrivals</span></button>
-        <button data-umami-event="Founder: receiving" type="button" class="shot-btn" data-img="assets/img/venture/receiving.jpg" data-cap="Weighbridge, tipping bay, pusher and shredder: every load logged, no hands on the waste."><img src="assets/img/venture/receiving-t.jpg" alt="Blueprint: weighing, tipping and shredding" loading="lazy" style="object-position:center"><span>Weigh, tip, shred</span></button>
-        <button data-umami-event="Founder: composting" type="button" class="shot-btn" data-img="assets/img/venture/composting.jpg" data-cap="Enclosed conveyor, machine-turned rows under a roof, hall air treatment and leachate recirculation."><img src="assets/img/venture/composting-t.jpg" alt="Blueprint: composting hall, air treatment and leachate" loading="lazy" style="object-position:center"><span>Compost, air &amp; liquid</span></button>
+      <p class="gallery-title">Phase 1 blueprint <span>Concept drawings, not to scale · click through the steps</span></p>
+      <div class="bp">
+        <button type="button" class="bp-view" id="bp-view" style="background:#c9c3b2" aria-label="Open drawing full size"><img id="bp-img" src="assets/img/venture/s1-collect.jpg" alt="Blueprint step 1: Collect" loading="lazy"><span class="bp-zoom">⤢ Full size</span></button>
+        <p class="bp-cap" id="bp-cap" aria-live="polite"><b>1 · Collect</b> Every flat gets a wet-waste bin and each building a lidded bin station. The crew checks for plastic, then the truck makes one stop per building.</p>
+        <div class="bp-steps"><button type="button" class="bp-step on" data-img="assets/img/venture/s1-collect.jpg" data-bg="#c9c3b2" data-t="Collect" data-c="Every flat gets a wet-waste bin and each building a lidded bin station. The crew checks for plastic, then the truck makes one stop per building." data-umami-event="Blueprint step 1"><b>1</b>Collect</button><button type="button" class="bp-step" data-img="assets/img/venture/s2-transport.jpg" data-bg="#c9c3b2" data-t="Transport" data-c="Trucks leave on timed slots, so each one arrives only when the shredder is free. No queue at the gate." data-umami-event="Blueprint step 2"><b>2</b>Transport</button><button type="button" class="bp-step" data-img="assets/img/venture/s3-weigh.jpg" data-bg="#f3f0e6" data-t="Weigh" data-c="Every load is weighed on arrival and logged per society and per round: the basis for billing and proof of service." data-umami-event="Blueprint step 3"><b>3</b>Weigh</button><button type="button" class="bp-step" data-img="assets/img/venture/s4-tip.jpg" data-bg="#c9c3b2" data-t="Tip" data-c="The tipper reverses in and empties into a low-walled buffer bay. No pit to dig, and the floor drains liquid to a sump." data-umami-event="Blueprint step 4"><b>4</b>Tip</button><button type="button" class="bp-step" data-img="assets/img/venture/s5-shred.jpg" data-bg="#f3f0e6" data-t="Shred" data-c="A push blade feeds the shredder at its own pace. One operator watches from a panel and nobody handles the waste. If the shredder is down, loads go to a partner site." data-umami-event="Blueprint step 5"><b>5</b>Shred</button><button type="button" class="bp-step" data-img="assets/img/venture/s6-convey.jpg" data-bg="#f3f0e6" data-t="Convey" data-c="An enclosed conveyor carries the shredded waste into the composting hall, with a point to mix in dry material." data-umami-event="Blueprint step 6"><b>6</b>Convey</button><button type="button" class="bp-step" data-img="assets/img/venture/s7-compost.jpg" data-bg="#f3f0e6" data-t="Compost" data-c="Long rows under a roof, turned by machine on a schedule. The whole hall’s air is extracted and treated before it leaves." data-umami-event="Blueprint step 7"><b>7</b>Compost</button><button type="button" class="bp-step" data-img="assets/img/venture/s8-leachate.jpg" data-bg="#f3f0e6" data-t="Leachate" data-c="Liquid from the floor channels is pumped to a sealed tank and sprayed back onto the active rows, where the heat dries it off." data-umami-event="Blueprint step 8"><b>8</b>Leachate</button></div>
       </div>
 
       <div class="f-stop">
@@ -437,6 +456,7 @@
           <li><b>Heavy before day one.</b> 11 pieces of plant, 3–4 trucks and 14 permits before the first tonne. It sits in the worst corner of the <button type="button" class="linkbtn" data-img="assets/img/venture/capital-chart.svg" data-cap="Capital intensity against potential: where the Phase 1 venture sits." data-umami-event="Founder: capital chart">capital-intensity matrix</button>.</li>
           <li><b>Founder fit.</b> A solo founder with no operating experience in waste, in a market where profitable plants run on public contracts or subsidy.</li>
         </ul>
+        <p class="f-next"><b>Next time:</b> start with collection only and hand the waste to a licensed plant, so demand is proven before any plant is built.</p>
         <p class="f-note">Figures are my own research estimates at the time of each decision.</p>
       </div>
     </div>
@@ -551,6 +571,12 @@ els.forEach(function(el){var t=el.textContent.split(' ');el.textContent='';t.for
 if(!('IntersectionObserver' in window))return;
 var io=new IntersectionObserver(function(en){en.forEach(function(e){e.target.classList.toggle('on',e.isIntersecting)})},{rootMargin:'-30% 0px -30% 0px'});
 els.forEach(function(e){io.observe(e)})})();
+</script>
+<script>
+(function(){var v=document.getElementById('bp-view');if(!v)return;var img=document.getElementById('bp-img'),cap=document.getElementById('bp-cap'),bs=document.querySelectorAll('.bp-step');
+bs.forEach(function(b,i){b.addEventListener('click',function(){bs.forEach(function(x){x.classList.remove('on')});b.classList.add('on');img.style.opacity=0;setTimeout(function(){img.src=b.dataset.img;img.alt='Blueprint step '+(i+1)+': '+b.dataset.t;v.style.background=b.dataset.bg;cap.innerHTML='<b>'+(i+1)+' · '+b.dataset.t+'</b> '+b.dataset.c;img.style.opacity=1},180)})});
+v.addEventListener('click',function(){var d=document.getElementById('lightbox');document.getElementById('lb-img').src=img.src;document.getElementById('lb-cap').textContent=cap.textContent;d.showModal()});
+['s2-transport','s3-weigh','s4-tip','s5-shred','s6-convey','s7-compost','s8-leachate'].forEach(function(n){var i=new Image();i.src='assets/img/venture/'+n+'.jpg'})})();
 </script>
 </body>
 </html>
