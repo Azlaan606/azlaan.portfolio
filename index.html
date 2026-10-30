@@ -217,7 +217,9 @@
   .bp-step.on b{color:var(--green)}
 
 
-  .f-biz{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+  .f-biz{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+  .f-biz ul{padding-left:16px;margin:0}
+  .f-biz li{font-size:.86rem;color:#333;line-height:1.45;margin-bottom:4px}
   .f-biz div{background:#f6f7f5;border-radius:12px;padding:14px 16px}
   .f-biz h4{font-size:.78rem;font-weight:700;color:var(--green);margin-bottom:4px}
   .f-biz p{font-size:.86rem;color:#333;line-height:1.45}
@@ -315,7 +317,7 @@
     .f-stop ul{grid-template-columns:1fr}
     .bp-steps{grid-template-columns:repeat(4,1fr)}
     .f-stats{grid-template-columns:1fr}
-    .f-biz{grid-template-columns:1fr 1fr}
+    .f-biz{grid-template-columns:1fr}
     .f-time{grid-template-columns:1fr 1fr}
     .f-end{grid-template-columns:1fr}
     .bp-view img{aspect-ratio:4/3}
@@ -463,12 +465,25 @@
         <h2>Waste-management venture</h2>
         <p class="meta">Built from zero · Circular economy · India · 14 months, 2025–2026</p>
       </div>
-      <p class="f-lead">I designed a service that collects food waste from large housing societies and turns it into compost, for <span class="hl">₹50 (~$0.50) per household a month</span>.</p>
+      <p class="f-lead">India’s cities produce more waste than they can process, and a new law moved the job onto the people producing it. I designed a company to take it off their hands: start with food waste at <span class="hl">₹50 (~$0.50) per household a month</span>, then grow into biogas and every other waste stream.</p>
       <div class="f-biz">
-        <div><h4>Customer</h4><p>Large, well-off housing societies in Jaipur, India</p></div>
-        <div><h4>Why they need it</h4><p>Since 1 April 2026, the law makes them process their own food waste or buy certificates from the city</p></div>
-        <div><h4>The plan</h4><p>Timed collection rounds, composting at a rented site, compost given away</p></div>
-        <div><h4>The price</h4><p>₹50 (~$0.50) a household a month. Society committees I spoke with agreed it was affordable</p></div>
+        <div><h4>Customers</h4><ul>
+          <li>Housing societies first: the most organised buyers</li>
+          <li>Mandis (large vegetable markets) and restaurants next</li>
+          <li>Homes as the network grows</li></ul></div>
+        <div><h4>Why they need it</h4><ul>
+          <li><b>The law:</b> since 1 April 2026, large waste producers must separate four streams and process their food waste, or buy certificates from the city</li>
+          <li><b>The shift:</b> the rules move the duty from the city onto societies, markets and restaurants</li>
+          <li><b>The mindset:</b> families moving into cities expect clean neighbourhoods and call out trash publicly</li></ul></div>
+        <div><h4>The plan</h4><ul>
+          <li><b>Phase 1:</b> timed collection rounds, composting at a rented site, compost given away. Proves they pay and keep paying</li>
+          <li><b>Phase 2:</b> biogas from food waste and market and cattle-farm waste, sold into the city gas network</li>
+          <li><b>Phase 3:</b> every other stream (dry recyclables, fuel for cement kilns), ending in one facility for all four</li>
+          <li>Work with kabadiwalas (informal collectors), not against them</li></ul></div>
+        <div><h4>The price</h4><ul>
+          <li>₹50 (~$0.50) per household a month, paid through the society committee</li>
+          <li>Society committees I spoke with agreed it was affordable</li>
+          <li>Compost is given away: the service fee is the business, gas is the long-term profit</li></ul></div>
       </div>
       <div class="f-stats">
         <button type="button" class="stat stat-btn" onclick="document.getElementById('models').showModal()" data-umami-event="Venture: three models"><b>3</b><span>business models tested; pivoted away from EPR credits and a ₹42L (~$44K) recycling plant</span><em>See the three models →</em></button>
@@ -487,7 +502,7 @@
       <ol class="f-time"><li><b>Mapped the market and the law</b><span>Waste segments, players, plastic EPR rules and the SWM Rules 2026</span></li><li><b>Tested EPR credits</b><span>Pivoted: credit revenue too unreliable to budget on</span></li><li><b>Tested a recycling plant</b><span>Pivoted: a ₹42L (~$44K) raise before any customer</span></li><li><b>Chose society food waste</b><span>Set ₹50; spoke with society committees and waste operators</span></li><li><b>Planned biogas, designed the plant</b><span>Found society waste can’t feed a gas plant; drew the 8-step facility</span></li><li><b>Made the go/no-go call</b><span>Chose not to build: the fee only matched the cost per tonne</span></li></ol>
 
       <div class="f-end">
-        <div class="f-insight2"><p class="lbl">My insight</p><p>The law creates the demand, but only the city can issue the certificates societies need. The real gatekeeper is the municipality, not the society.</p><span class="soon soon-d">Full case study · Coming soon</span></div>
+        <div class="f-insight2"><p class="lbl">My insight</p><p>The law creates the demand, but only the city can issue the certificates waste producers need, and it shares that fee with the operators it authorises. The way in is a partnership with the municipality, not door-to-door selling.</p><span class="soon soon-d">Full case study · Coming soon</span></div>
         <div class="f-stop"><p class="lbl">The go/no-go call</p><p class="f-call">Before putting money into a plant, I set the bar the plan had to clear. It didn’t, so I chose not to build:</p>
           <ul>
             <li><b>The fee only matched the cost.</b> ₹50 a household is about ₹1,700–2,300 (~$18–24) per tonne, roughly what cities already pay just to collect and process it.</li>
