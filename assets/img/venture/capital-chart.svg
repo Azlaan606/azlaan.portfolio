@@ -23,6 +23,6 @@
   <circle cx="300" cy="140" r="24" fill="none" stroke="#a8431f" stroke-opacity=".35" stroke-width="2"/>
   <rect x="322" y="112" width="372" height="74" rx="8" fill="#ffffff" stroke="#e6d6cf"/>
   <text x="334" y="135" font-size="17" font-weight="700" fill="#111">My Phase 1 venture</text>
-  <text x="334" y="157" font-size="14" fill="#555">Plant, trucks and 14 permits before the first tonne;</text>
+  <text x="334" y="157" font-size="14" fill="#555">Plant, trucks and permits before the first tonne;</text>
   <text x="334" y="175" font-size="14" fill="#555">a ₹50 (~$0.50) fee near break-even per tonne</text>
 </svg>
