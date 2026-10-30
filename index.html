@@ -179,12 +179,16 @@
   .f-lead{max-width:820px;font-size:1.05rem;color:#222;margin-bottom:20px}
   .f-insight{max-width:820px;font-size:.98rem;color:#222;border-left:3px solid var(--green);padding:4px 0 4px 14px;margin:-4px 0 22px}
   .f-insight b{color:var(--green)}
-  .f-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
+  .f-stats{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:28px}
   .f-stats .stat{text-align:left;padding:16px}
   .f-stats b{display:block;font-size:1.6rem;color:var(--green);line-height:1.1}
   .f-stats span{margin-top:6px}
   .stat-btn{font:inherit;cursor:pointer;transition:border-color .15s,box-shadow .15s}
   .stat-btn:hover{border-color:var(--green);box-shadow:0 8px 22px rgba(29,74,58,.10)}
+  .f-stats .stat-btn{display:flex;align-items:center;gap:16px;padding:12px 18px;width:100%}
+  .f-stats .stat-btn b{font-size:1.5rem}
+  .f-stats .stat-btn span{margin:0;flex:1}
+  .f-stats .stat-btn em{margin:0;white-space:nowrap}
   .stat-btn em{display:block;margin-top:8px;font-style:normal;font-size:.8rem;font-weight:600;color:var(--green)}
   .mlist{display:grid;gap:14px}
   .mitem{border:1px solid #e6ebe8;border-radius:12px;padding:16px 18px}
@@ -217,9 +221,9 @@
   .bp-step.on b{color:var(--green)}
 
 
-  .f-biz{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+  .f-biz{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
   .f-biz ul{padding-left:16px;margin:0}
-  .f-biz li{font-size:.86rem;color:#333;line-height:1.45;margin-bottom:4px}
+  .f-biz li{font-size:.84rem;color:#333;line-height:1.4;margin-bottom:3px}
   .f-biz div{background:#f6f7f5;border-radius:12px;padding:14px 16px}
   .f-biz h4{font-size:.78rem;font-weight:700;color:var(--green);margin-bottom:4px}
   .f-biz p{font-size:.86rem;color:#333;line-height:1.45}
@@ -317,7 +321,7 @@
     .f-stop ul{grid-template-columns:1fr}
     .bp-steps{grid-template-columns:repeat(4,1fr)}
     .f-stats{grid-template-columns:1fr}
-    .f-biz{grid-template-columns:1fr}
+    .f-biz{grid-template-columns:1fr 1fr}
     .f-time{grid-template-columns:1fr 1fr}
     .f-end{grid-template-columns:1fr}
     .bp-view img{aspect-ratio:4/3}
@@ -467,28 +471,15 @@
       </div>
       <p class="f-lead">India’s cities produce more waste than they can process, and a new law moved the job onto the people producing it. I designed a company to take it off their hands: start with food waste at <span class="hl">₹50 (~$0.50) per household a month</span>, then grow into biogas and every other waste stream.</p>
       <div class="f-biz">
-        <div><h4>Customers</h4><ul>
-          <li>Housing societies first: the most organised buyers</li>
-          <li>Mandis (large vegetable markets) and restaurants next</li>
-          <li>Homes as the network grows</li></ul></div>
-        <div><h4>Why they need it</h4><ul>
-          <li><b>The law:</b> since 1 April 2026, large waste producers must separate four streams and process their food waste, or buy certificates from the city</li>
-          <li><b>The shift:</b> the rules move the duty from the city onto societies, markets and restaurants</li>
-          <li><b>The mindset:</b> families moving into cities expect clean neighbourhoods and call out trash publicly</li></ul></div>
-        <div><h4>The plan</h4><ul>
-          <li><b>Phase 1:</b> timed collection rounds, composting at a rented site, compost given away. Proves they pay and keep paying</li>
-          <li><b>Phase 2:</b> biogas from food waste and market and cattle-farm waste, sold into the city gas network</li>
-          <li><b>Phase 3:</b> every other stream (dry recyclables, fuel for cement kilns), ending in one facility for all four</li>
-          <li>Work with kabadiwalas (informal collectors), not against them</li></ul></div>
-        <div><h4>The price</h4><ul>
-          <li>₹50 (~$0.50) per household a month, paid through the society committee</li>
-          <li>Society committees I spoke with agreed it was affordable</li>
-          <li>Compost is given away: the service fee is the business, gas is the long-term profit</li></ul></div>
+        <div><h4>Customers</h4><ul><li>Housing societies first</li><li>Mandis (vegetable markets) and restaurants next</li><li>Homes later</li></ul></div>
+        <div><h4>Why they need it</h4><ul><li>2026 law: process food waste or pay the city</li><li>The duty moved from the city onto them</li><li>City families expect clean streets</li></ul></div>
+        <div><h4>The plan</h4><ul><li>Phase 1: compost, prove they pay</li><li>Phase 2: biogas into the gas grid</li><li>Phase 3: every waste stream, one site</li></ul></div>
+        <div><h4>The price</h4><ul><li>₹50 (~$0.50) a household a month</li><li>Society committees agreed</li><li>Compost free; fees, then gas, pay</li></ul></div>
       </div>
       <div class="f-stats">
         <button type="button" class="stat stat-btn" onclick="document.getElementById('models').showModal()" data-umami-event="Venture: three models"><b>3</b><span>business models tested; pivoted away from EPR credits and a ₹42L (~$44K) recycling plant</span><em>See the three models →</em></button>
-        <div class="stat"><b>32 t</b><span>of food waste for one tonne of biogas: why society waste alone can’t feed a gas plant</span></div>
-        <div class="stat"><b>11</b><span>machines plus 3–4 trucks planned for one pilot site, before the first tonne is processed</span></div>
+        
+        
       </div>
 
       <p class="gallery-title">How it works <span>Concept drawings, not to scale · click through the steps</span></p>
